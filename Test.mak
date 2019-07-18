@@ -108,6 +108,8 @@ SOURCE_FILES = \
 ../../../protocol\zigbee\app\framework\plugin\address-table\address-table-cli.c \
 ../../../platform\base\hal\plugin\antenna-stub\antenna-stub.c \
 ../../../protocol\zigbee\app\framework\plugin\basic\basic.c \
+../../../util\plugin\plugin-common\battery-monitor\battery-monitor-efr32.c \
+../../../protocol\zigbee\app\framework\plugin\color-control\color-control.c \
 ../../../protocol\zigbee\app\framework\plugin-soc\connection-manager\connection-manager.c \
 ../../../protocol\zigbee\app\framework\plugin-soc\connection-manager\connection-manager-cli.c \
 ../../../protocol\zigbee\app\framework\plugin\counters\counters-cli.c \
@@ -122,11 +124,10 @@ SOURCE_FILES = \
 ../../../protocol\zigbee\app\framework\plugin\form-and-join\form-and-join-afv2.c \
 ../../../protocol\zigbee\app\util\common\form-and-join.c \
 ../../../protocol\zigbee\app\util\common\form-and-join-node-adapter.c \
+../../../util\plugin\plugin-common\generic-interrupt-control\generic-interrupt-control-efr32.c \
 ../../../protocol\zigbee\app\framework\plugin\green-power-client\green-power-client.c \
 ../../../protocol\zigbee\app\framework\plugin\green-power-client\green-power-client-cli.c \
 ../../../protocol\zigbee\app\framework\plugin\green-power-common\green-power-common.c \
-../../../protocol\zigbee\app\framework\plugin\groups-server\groups-server.c \
-../../../protocol\zigbee\app\framework\plugin\groups-server\groups-server-cli.c \
 ../../../platform\base\hal\micro\cortexm3\efm32\hal-config.c \
 ../../../platform\base\hal\micro\cortexm3\efm32\hal-config-gpio.c \
 ../../../platform\base\hal\plugin\coexistence\coexistence-efr32.c \
@@ -134,12 +135,10 @@ SOURCE_FILES = \
 ../../../protocol\zigbee\app\framework\plugin\identify\identify.c \
 ../../../protocol\zigbee\app\framework\plugin\identify\identify-cli.c \
 ../../../util\plugin\plugin-common\led-blink\led-blink.c \
-../../../protocol\zigbee\app\framework\plugin\level-control\level-control.c \
 ../../../protocol\zigbee\app\framework\plugin\manufacturing-library-cli\manufacturing-library-cli-soc.c \
 ../../../protocol\zigbee\app\framework\plugin\network-steering\network-steering.c \
 ../../../protocol\zigbee\app\framework\plugin\network-steering\network-steering-cli.c \
 ../../../protocol\zigbee\app\framework\plugin\network-steering\network-steering-soc.c \
-../../../protocol\zigbee\app\framework\plugin\on-off\on-off.c \
 ../../../protocol\zigbee\app\framework\plugin\ota-bootload\ota-bootload-cli.c \
 ../../../protocol\zigbee\app\framework\plugin\ota-bootload\ota-bootload-soc.c \
 ../../../protocol\zigbee\app\framework\plugin\ota-client\ota-client.c \
@@ -154,12 +153,11 @@ SOURCE_FILES = \
 ../../../protocol\zigbee\app\framework\plugin\ota-storage-simple-eeprom\ota-storage-eeprom.c \
 ../../../protocol\zigbee\app\framework\plugin\ota-storage-simple-eeprom\ota-storage-eeprom-page-erase.c \
 ../../../protocol\zigbee\app\framework\plugin\ota-storage-simple-eeprom\ota-storage-eeprom-read-modify-write.c \
+../../../protocol\zigbee\app\framework\plugin-soc\power-configuration-server\power-configuration-server.c \
 ../../../protocol\zigbee\app\framework\plugin\reporting\reporting.c \
 ../../../protocol\zigbee\app\framework\plugin\reporting\reporting-cli.c \
 ../../../protocol\zigbee\app\framework\plugin\reporting\reporting-default-configuration.c \
 ../../../protocol\zigbee\app\framework\plugin\scan-dispatch\scan-dispatch.c \
-../../../protocol\zigbee\app\framework\plugin\scenes\scenes.c \
-../../../protocol\zigbee\app\framework\plugin\scenes\scenes-cli.c \
 ../../../platform\base\hal\plugin\serial\serial.c \
 ../../../platform\base\hal\plugin\sim-eeprom1\sim-eeprom.c \
 ../../../protocol\zigbee\app\framework\plugin\simple-main\simple-main.c \
@@ -211,13 +209,13 @@ CDEFS = -DLOCAL_STORAGE_GECKO_INFO_PAGE_BTL \
 -DZA_GENERATED_HEADER=\"app/builder/Test/Test.h\" \
   -DHAL_CONFIG=1 \
   -DEMBER_AF_USE_HWCONF \
-  -DEMBER_PARAMETERIZED_BROADCAST_TABLE \
-  -DEMLIB_USER_CONFIG \
   -DEMBER_AF_API_EMBER_TYPES=\"stack/include/ember-types.h\" \
   -DEMBER_AF_API_DEBUG_PRINT=\"app/framework/util/print.h\" \
   -DEMBER_AF_API_AF_HEADER=\"app/framework/include/af.h\" \
   -DEMBER_AF_API_AF_SECURITY_HEADER=\"app/framework/security/af-security.h\" \
   -DEMBER_STACK_ZIGBEE \
+  -DEMBER_PARAMETERIZED_BROADCAST_TABLE \
+  -DEMLIB_USER_CONFIG \
   -DPHY_RAIL \
   -DAPPLICATION_TOKEN_HEADER=\"app/builder/Test/afv2-token.h\" \
   -DAPPLICATION_MFG_TOKEN_HEADER=\"app/builder/Test/afv2-mfg-token.h\" \
@@ -239,13 +237,13 @@ ASMDEFS = -DLOCAL_STORAGE_GECKO_INFO_PAGE_BTL \
 -DZA_GENERATED_HEADER=\"app/builder/Test/Test.h\" \
   -DHAL_CONFIG=1 \
   -DEMBER_AF_USE_HWCONF \
-  -DEMBER_PARAMETERIZED_BROADCAST_TABLE \
-  -DEMLIB_USER_CONFIG \
   -DEMBER_AF_API_EMBER_TYPES=\"stack/include/ember-types.h\" \
   -DEMBER_AF_API_DEBUG_PRINT=\"app/framework/util/print.h\" \
   -DEMBER_AF_API_AF_HEADER=\"app/framework/include/af.h\" \
   -DEMBER_AF_API_AF_SECURITY_HEADER=\"app/framework/security/af-security.h\" \
   -DEMBER_STACK_ZIGBEE \
+  -DEMBER_PARAMETERIZED_BROADCAST_TABLE \
+  -DEMLIB_USER_CONFIG \
   -DPHY_RAIL \
   -DAPPLICATION_TOKEN_HEADER=\"app/builder/Test/afv2-token.h\" \
   -DAPPLICATION_MFG_TOKEN_HEADER=\"app/builder/Test/afv2-mfg-token.h\" \

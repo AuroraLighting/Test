@@ -105,6 +105,28 @@ bool emberAfAttributeWriteAccessCallback(uint8_t endpoint,
   return true;
 }
 
+/** @brief Groups Cluster Clear Group Table
+ *
+ * This function is called by the framework when the application should clear
+ * the group table.
+ *
+ * @param endpoint The endpoint.  Ver.: always
+ */
+void emberAfGroupsClusterClearGroupTableCallback(uint8_t endpoint)
+{
+}
+
+/** @brief Scenes Cluster ClearSceneTable
+ *
+ * This function is called by the framework when the application should clear
+ * the scene table.
+ *
+ * @param endpoint The endpoint.  Ver.: always
+ */
+void emberAfScenesClusterClearSceneTableCallback(uint8_t endpoint)
+{
+}
+
 /** @brief Key Establishment Cluster Client Command Received
  *
  * This function is called by the application framework when a server-to-client
@@ -265,6 +287,21 @@ bool emberAfDiscoverCommandsReceivedResponseCallback(EmberAfClusterId clusterId,
                                                      bool discoveryComplete,
                                                      uint8_t *commandIds,
                                                      uint16_t commandIdCount)
+{
+  return false;
+}
+
+/** @brief Groups Cluster Endpoint In Group
+ *
+ * This function is called by the framework when it needs to determine if an
+ * endpoint is a member of a group.  The application should return true if the
+ * endpoint is a member of the group and false otherwise.
+ *
+ * @param endpoint The endpoint.  Ver.: always
+ * @param groupId The group identifier.  Ver.: always
+ */
+bool emberAfGroupsClusterEndpointInGroupCallback(uint8_t endpoint,
+                                                 uint16_t groupId)
 {
   return false;
 }
@@ -798,6 +835,58 @@ bool emberAfKeyEstablishmentCallback(EmberAfKeyEstablishmentNotifyMessage status
   return true;
 }
 
+/** @brief On/off Cluster Level Control Effect
+ *
+ * This is called by the framework when the on/off cluster initiates a command
+ * that must effect a level control change. The implementation assumes that the
+ * client will handle any effect on the On/Off Cluster.
+ *
+ * @param endpoint   Ver.: always
+ * @param newValue   Ver.: always
+ */
+void emberAfOnOffClusterLevelControlEffectCallback(uint8_t endpoint,
+                                                   bool newValue)
+{
+}
+
+/** @brief Main Start
+ *
+ * This function is called at the start of main after the HAL has been
+ * initialized.  The standard main function arguments of argc and argv are
+ * passed in.  However not all platforms have support for main() function
+ * arguments.  Those that do not are passed NULL for argv, therefore argv should
+ * be checked for NULL before using it.  If the callback determines that the
+ * program must exit, it should return true.  The value returned by main() will
+ * be the value written to the returnCode pointer.  Otherwise the callback
+ * should return false to let normal execution continue.
+ *
+ * @param returnCode   Ver.: always
+ * @param argc   Ver.: always
+ * @param argv   Ver.: always
+ */
+bool emberAfMainStartCallback(int* returnCode,
+                              int argc,
+                              char** argv)
+{
+  // NOTE:  argc and argv may not be supported on all platforms, so argv MUST be
+  // checked for NULL before referencing it.  On those platforms without argc 
+  // and argv "0" and "NULL" are passed respectively.
+
+  return false;  // exit?
+}
+
+/** @brief Scenes Cluster Make Invalid
+ *
+ * This function is called to invalidate the valid attribute in the Scenes
+ * cluster.
+ *
+ * @param endpoint   Ver.: always
+ */
+EmberAfStatus emberAfScenesClusterMakeInvalidCallback(uint8_t endpoint)
+{
+  return EMBER_ZCL_STATUS_UNSUP_CLUSTER_COMMAND;
+}
+
 /** @brief Message Sent
  *
  * This function is called by the application framework from the message sent
@@ -1117,6 +1206,20 @@ void emberAfPluginBasicResetToFactoryDefaultsCallback(uint8_t endpoint)
 {
 }
 
+/** @brief Is Color Supported
+ *
+ * This function will be called to determine whether a color is supported by a
+ * device. The color will be specified by hue and saturation.
+ *
+ * @param hue   Ver.: always
+ * @param saturation   Ver.: always
+ */
+bool emberAfPluginColorControlIsColorSupportedCallback(uint8_t hue,
+                                                       uint8_t saturation)
+{
+  return true;
+}
+
 /** @brief Rollover
  *
  * This function is called every time a counter exceeds its threshold.
@@ -1156,69 +1259,6 @@ void emberAfPluginFormAndJoinNetworkFoundCallback(EmberZigbeeNetwork *networkFou
  */
 void emberAfPluginFormAndJoinUnusedPanIdFoundCallback(EmberPanId panId,
                                                       uint8_t channel)
-{
-}
-
-/** @brief Get Group Name
- *
- * This function returns the name of a group with the provided group ID, should
- * it exist.
- *
- * @param endpoint Endpoint Ver.: always
- * @param groupId Group ID Ver.: always
- * @param groupName Group Name Ver.: always
- */
-void emberAfPluginGroupsServerGetGroupNameCallback(uint8_t endpoint,
-                                                   uint16_t groupId,
-                                                   uint8_t *groupName)
-{
-}
-
-/** @brief Group Names Supported
- *
- * This function returns whether or not group names are supported.
- *
- * @param endpoint Endpoint Ver.: always
- */
-bool emberAfPluginGroupsServerGroupNamesSupportedCallback(uint8_t endpoint)
-{
-  return false;
-}
-
-/** @brief Set Group Name
- *
- * This function sets the name of a group with the provided group ID.
- *
- * @param endpoint Endpoint Ver.: always
- * @param groupId Group ID Ver.: always
- * @param groupName Group Name Ver.: always
- */
-void emberAfPluginGroupsServerSetGroupNameCallback(uint8_t endpoint,
-                                                   uint16_t groupId,
-                                                   uint8_t *groupName)
-{
-}
-
-/** @brief Level Control Cluster Server Post Init
- *
- * Following resolution of the Current Level at startup for this endpoint,
- * perform any additional initialization needed; e.g., synchronize hardware
- * state.
- *
- * @param endpoint Endpoint that is being initialized  Ver.: always
- */
-void emberAfPluginLevelControlClusterServerPostInitCallback(uint8_t endpoint)
-{
-}
-
-/** @brief Level Control Coupled Color Temp Change
- *
- * Adjust Color Control cluster Color Temperature in response to a change in
- * Level Control cluster CurrentLevel.
- *
- * @param endpoint Endpoint that is being initialized  Ver.: always
- */
-void emberAfPluginLevelControlCoupledColorTempChangeCallback(uint8_t endpoint)
 {
 }
 
@@ -1266,17 +1306,6 @@ EmberNodeType emberAfPluginNetworkSteeringGetNodeTypeCallback(EmberAfPluginNetwo
 int8_t emberAfPluginNetworkSteeringGetPowerForRadioChannelCallback(uint8_t channel)
 {
   return emberAfMaxPowerLevel();
-}
-
-/** @brief On/off Cluster Server Post Init
- *
- * Following resolution of the On/Off state at startup for this endpoint, perform any
- * additional initialization needed; e.g., synchronize hardware state.
- *
- * @param endpoint Endpoint that is being initialized  Ver.: always
- */
-void emberAfPluginOnOffClusterServerPostInitCallback(uint8_t endpoint)
-{
 }
 
 /** @brief Configured
@@ -1519,6 +1548,22 @@ bool emberAfReadReportingConfigurationResponseCallback(EmberAfClusterId clusterI
   return false;
 }
 
+/** @brief Scenes Cluster Recall Saved Scene
+ *
+ * This function is called by the framework when the application should recall a
+ * saved scene.
+ *
+ * @param endpoint The endpoint.  Ver.: always
+ * @param groupId The group identifier.  Ver.: always
+ * @param sceneId The scene identifier.  Ver.: always
+ */
+EmberAfStatus emberAfScenesClusterRecallSavedSceneCallback(uint8_t endpoint,
+                                                           uint16_t groupId,
+                                                           uint8_t sceneId)
+{
+  return EMBER_ZCL_STATUS_FAILURE;
+}
+
 /** @brief Registration Abort
  *
  * This callback is called when the device should abort the registration
@@ -1595,6 +1640,18 @@ EmberStatus emberAfRemoteSetBindingPermissionCallback(const EmberBindingTableEnt
  * @param tasks   Ver.: always
  */
 void emberAfRemoveFromCurrentAppTasksCallback(EmberAfApplicationTask tasks)
+{
+}
+
+/** @brief Scenes Cluster Remove Scenes In Group
+ *
+ * This function removes the scenes from a specified group.
+ *
+ * @param endpoint Endpoint  Ver.: always
+ * @param groupId Group ID  Ver.: always
+ */
+void emberAfScenesClusterRemoveScenesInGroupCallback(uint8_t endpoint,
+                                                     uint16_t groupId)
 {
 }
 
@@ -1778,6 +1835,22 @@ void emberAfSetTimeCallback(uint32_t utcTime)
 {
 }
 
+/** @brief On/off Cluster Set Value
+ *
+ * This function is called when the on/off value needs to be set, either through
+ * normal channels or as a result of a level change.
+ *
+ * @param endpoint   Ver.: always
+ * @param command   Ver.: always
+ * @param initiatedByLevelChange   Ver.: always
+ */
+EmberAfStatus emberAfOnOffClusterSetValueCallback(uint8_t endpoint,
+                                                  uint8_t command,
+                                                  bool initiatedByLevelChange)
+{
+  return EMBER_ZCL_STATUS_UNSUP_CLUSTER_COMMAND;
+}
+
 /** @brief Set Wake Timeout Bitmask
  *
  * This function is only useful to sleepy end devices.  This function will set
@@ -1863,6 +1936,25 @@ EmberStatus emberAfStartSearchForJoinableNetworkCallback(void)
  */
 void emberAfStopMoveCallback(void)
 {
+}
+
+/** @brief Scenes Cluster Store Current Scene
+ *
+ * This function is called by the framework when the application should store
+ * the current scene.  If an entry already exists in the scene table with the
+ * same scene and group ids, the application should update the entry with the
+ * current scene.  Otherwise, a new entry should be adde to the scene table, if
+ * possible.
+ *
+ * @param endpoint The endpoint.  Ver.: always
+ * @param groupId The group identifier.  Ver.: always
+ * @param sceneId The scene identifier.  Ver.: always
+ */
+EmberAfStatus emberAfScenesClusterStoreCurrentSceneCallback(uint8_t endpoint,
+                                                            uint16_t groupId,
+                                                            uint8_t sceneId)
+{
+  return EMBER_ZCL_STATUS_FAILURE;
 }
 
 /** @brief Trust Center Join

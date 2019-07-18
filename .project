@@ -251,6 +251,11 @@
 			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/basic/basic.c</locationURI>
 		</link>
 		<link>
+			<name>color-control/color-control.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/color-control/color-control.c</locationURI>
+		</link>
+		<link>
 			<name>concentrator/concentrator-support-cli.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/concentrator/concentrator-support-cli.c</locationURI>
@@ -726,6 +731,11 @@
 			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/ota-storage-simple-eeprom/ota-storage-eeprom.c</locationURI>
 		</link>
 		<link>
+			<name>power-configuration-server/power-configuration-server.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin-soc/power-configuration-server/power-configuration-server.c</locationURI>
+		</link>
+		<link>
 			<name>reporting/reporting-cli.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/reporting/reporting-cli.c</locationURI>
@@ -776,6 +786,11 @@
 			<locationURI>STUDIO_SDK_LOC/platform/base/hal/plugin/adc/adc-efr32.c</locationURI>
 		</link>
 		<link>
+			<name>battery-monitor/EFR32/battery-monitor-efr32.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/util/plugin/plugin-common/battery-monitor/battery-monitor-efr32.c</locationURI>
+		</link>
+		<link>
 			<name>debug-basic-library/EFR32/SEGGER_RTT.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/base/hal/plugin/debug/rtt/SEGGER_RTT.c</locationURI>
@@ -784,6 +799,11 @@
 			<name>debug-jtag/EFR32/debug-jtag-efr32.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/base/hal/plugin/debug-jtag/debug-jtag-efr32.c</locationURI>
+		</link>
+		<link>
+			<name>generic-interrupt-control/EFR32/generic-interrupt-control-efr32.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/util/plugin/plugin-common/generic-interrupt-control/generic-interrupt-control-efr32.c</locationURI>
 		</link>
 		<link>
 			<name>hal-library/EFR32/coexistence-efr32.c</name>

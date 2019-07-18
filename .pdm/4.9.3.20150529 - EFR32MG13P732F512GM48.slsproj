@@ -89,13 +89,13 @@
   <macroDefinition partCompatibility=".*efr32.*" languageCompatibility="c asm" name="EFR32_SERIES1_CONFIG3_MICRO" value="1"/>
   <macroDefinition name="HAL_CONFIG" value="1"/>
   <macroDefinition name="EMBER_AF_USE_HWCONF" value=""/>
-  <macroDefinition name="EMBER_PARAMETERIZED_BROADCAST_TABLE" value=""/>
-  <macroDefinition name="EMLIB_USER_CONFIG" value=""/>
   <macroDefinition name="EMBER_AF_API_EMBER_TYPES" value="&quot;stack/include/ember-types.h&quot;"/>
   <macroDefinition name="EMBER_AF_API_DEBUG_PRINT" value="&quot;app/framework/util/print.h&quot;"/>
   <macroDefinition name="EMBER_AF_API_AF_HEADER" value="&quot;app/framework/include/af.h&quot;"/>
   <macroDefinition name="EMBER_AF_API_AF_SECURITY_HEADER" value="&quot;app/framework/security/af-security.h&quot;"/>
   <macroDefinition name="EMBER_STACK_ZIGBEE" value=""/>
+  <macroDefinition name="EMBER_PARAMETERIZED_BROADCAST_TABLE" value=""/>
+  <macroDefinition name="EMLIB_USER_CONFIG" value=""/>
   <macroDefinition name="PHY_RAIL" value=""/>
   <macroDefinition name="APPLICATION_TOKEN_HEADER" value="&quot;app/builder/Test/afv2-token.h&quot;"/>
   <macroDefinition name="APPLICATION_MFG_TOKEN_HEADER" value="&quot;app/builder/Test/afv2-mfg-token.h&quot;"/>

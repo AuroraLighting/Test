@@ -15,28 +15,30 @@
 #if BIGENDIAN_CPU
 #define GENERATED_DEFAULTS { \
 6,'A','u','r','o','r','a',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /* 0,Default value: Basic,manufacturer name */, \
-16,'F','W','M','P','R','O','Z','X','B','u','l','b','5','0','A','U',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /* 33,Default value: Basic,model identifier */, \
-7,'N','P','D','3','9','2','0',0,0,0,0,0,0,0,0,0 /* 66,Default value: Basic,product code */, \
-22,'w','w','w','.','a','u','r','o','r','a','l','i','g','h','t','i','n','g','.','c','o','m',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /* 83,Default value: Basic,product url */, \
-0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF /* 148,Default value: Over the Air Bootloading,OTA Upgrade Server ID */, \
-0xFF, 0xFF, 0xFF, 0xFF /* 156,Default value: Over the Air Bootloading,Offset (address) into the file */, \
-0xFF, 0xFF, 0xFF, 0xFF /* 160,Default value: Over the Air Bootloading,OTA Current File Version */, \
-0x09, 0xAC, 0x2F /* 164,Default value: Green Power,gpp functionality */, \
-0xFF, 0xFF, 0xFF /* 167,Default value: Green Power,gpp active functionality */, \
-0x5A, 0x69, 0x67, 0x42, 0x65, 0x65, 0x41, 0x6C, 0x6C, 0x69, 0x61, 0x6E, 0x63, 0x65, 0x30, 0x39 /* 170,Default value: Green Power,gp link key */, \
+19,'1','G','B','a','t','t','e','r','y','D','i','m','m','e','r','5','0','A','U',0,0,0,0,0,0,0,0,0,0,0,0,0 /* 33,Default value: Basic,model identifier */, \
+8,'2','0','1','9','0','5','0','2',0,0,0,0,0,0,0,0 /* 66,Default value: Basic,date code */, \
+7,'N','P','D','4','4','4','0',0,0,0,0,0,0,0,0,0 /* 83,Default value: Basic,product code */, \
+22,'w','w','w','.','a','u','r','o','r','a','l','i','g','h','t','i','n','g','.','c','o','m',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /* 100,Default value: Basic,product url */, \
+0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF /* 165,Default value: Over the Air Bootloading,OTA Upgrade Server ID */, \
+0xFF, 0xFF, 0xFF, 0xFF /* 173,Default value: Over the Air Bootloading,Offset (address) into the file */, \
+0x00, 0x00, 0x00, 0x01 /* 177,Default value: Over the Air Bootloading,OTA Current File Version */, \
+0x09, 0xAC, 0x2F /* 181,Default value: Green Power,gpp functionality */, \
+0xFF, 0xFF, 0xFF /* 184,Default value: Green Power,gpp active functionality */, \
+0x5A, 0x69, 0x67, 0x42, 0x65, 0x65, 0x41, 0x6C, 0x6C, 0x69, 0x61, 0x6E, 0x63, 0x65, 0x30, 0x39 /* 187,Default value: Green Power,gp link key */, \
   }
 #else // ! BIGENDIAN_CPU
 #define GENERATED_DEFAULTS { \
 6,'A','u','r','o','r','a',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /* 0,Default value: Basic,manufacturer name */, \
-16,'F','W','M','P','R','O','Z','X','B','u','l','b','5','0','A','U',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /* 33,Default value: Basic,model identifier */, \
-7,'N','P','D','3','9','2','0',0,0,0,0,0,0,0,0,0 /* 66,Default value: Basic,product code */, \
-22,'w','w','w','.','a','u','r','o','r','a','l','i','g','h','t','i','n','g','.','c','o','m',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /* 83,Default value: Basic,product url */, \
-0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF /* 148,Default value: Over the Air Bootloading,OTA Upgrade Server ID */, \
-0xFF, 0xFF, 0xFF, 0xFF /* 156,Default value: Over the Air Bootloading,Offset (address) into the file */, \
-0xFF, 0xFF, 0xFF, 0xFF /* 160,Default value: Over the Air Bootloading,OTA Current File Version */, \
-0x2F, 0xAC, 0x09 /* 164,Default value: Green Power,gpp functionality */, \
-0xFF, 0xFF, 0xFF /* 167,Default value: Green Power,gpp active functionality */, \
-0x5A, 0x69, 0x67, 0x42, 0x65, 0x65, 0x41, 0x6C, 0x6C, 0x69, 0x61, 0x6E, 0x63, 0x65, 0x30, 0x39 /* 170,Default value: Green Power,gp link key */, \
+19,'1','G','B','a','t','t','e','r','y','D','i','m','m','e','r','5','0','A','U',0,0,0,0,0,0,0,0,0,0,0,0,0 /* 33,Default value: Basic,model identifier */, \
+8,'2','0','1','9','0','5','0','2',0,0,0,0,0,0,0,0 /* 66,Default value: Basic,date code */, \
+7,'N','P','D','4','4','4','0',0,0,0,0,0,0,0,0,0 /* 83,Default value: Basic,product code */, \
+22,'w','w','w','.','a','u','r','o','r','a','l','i','g','h','t','i','n','g','.','c','o','m',0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 /* 100,Default value: Basic,product url */, \
+0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF /* 165,Default value: Over the Air Bootloading,OTA Upgrade Server ID */, \
+0xFF, 0xFF, 0xFF, 0xFF /* 173,Default value: Over the Air Bootloading,Offset (address) into the file */, \
+0x01, 0x00, 0x00, 0x00 /* 177,Default value: Over the Air Bootloading,OTA Current File Version */, \
+0x2F, 0xAC, 0x09 /* 181,Default value: Green Power,gpp functionality */, \
+0xFF, 0xFF, 0xFF /* 184,Default value: Green Power,gpp active functionality */, \
+0x5A, 0x69, 0x67, 0x42, 0x65, 0x65, 0x41, 0x6C, 0x6C, 0x69, 0x61, 0x6E, 0x63, 0x65, 0x30, 0x39 /* 187,Default value: Green Power,gp link key */, \
   }
 #endif // BIGENDIAN_CPU
 
@@ -46,75 +48,77 @@
 // Generated attributes
 #define GENERATED_ATTRIBUTES { \
     { 0x0000, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x02 } }, /* 0 / Basic / ZCL version*/\
-    { 0x0001, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x00 } }, /* 1 / Basic / application version*/\
-    { 0x0002, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x00 } }, /* 2 / Basic / stack version*/\
-    { 0x0003, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x00 } }, /* 3 / Basic / hardware version*/\
+    { 0x0001, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x01 } }, /* 1 / Basic / application version*/\
+    { 0x0002, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x02 } }, /* 2 / Basic / stack version*/\
+    { 0x0003, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x01 } }, /* 3 / Basic / hardware version*/\
     { 0x0004, ZCL_CHAR_STRING_ATTRIBUTE_TYPE, 33, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)&(generatedDefaults[0]) } }, /* 4 / Basic / manufacturer name*/\
     { 0x0005, ZCL_CHAR_STRING_ATTRIBUTE_TYPE, 33, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)&(generatedDefaults[33]) } }, /* 5 / Basic / model identifier*/\
-    { 0x0006, ZCL_CHAR_STRING_ATTRIBUTE_TYPE, 17, (ATTRIBUTE_MASK_SINGLETON), { NULL } }, /* 6 / Basic / date code*/\
+    { 0x0006, ZCL_CHAR_STRING_ATTRIBUTE_TYPE, 17, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)&(generatedDefaults[66]) } }, /* 6 / Basic / date code*/\
     { 0x0007, ZCL_ENUM8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)1 } }, /* 7 / Basic / power source*/\
     { 0x0008, ZCL_ENUM8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0xFF } }, /* 8 / Basic / generic device class*/\
     { 0x0009, ZCL_ENUM8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0xFF } }, /* 9 / Basic / generic device type*/\
-    { 0x000A, ZCL_OCTET_STRING_ATTRIBUTE_TYPE, 17, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)&(generatedDefaults[66]) } }, /* 10 / Basic / product code*/\
-    { 0x000B, ZCL_CHAR_STRING_ATTRIBUTE_TYPE, 65, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)&(generatedDefaults[83]) } }, /* 11 / Basic / product url*/\
+    { 0x000A, ZCL_OCTET_STRING_ATTRIBUTE_TYPE, 17, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)&(generatedDefaults[83]) } }, /* 10 / Basic / product code*/\
+    { 0x000B, ZCL_CHAR_STRING_ATTRIBUTE_TYPE, 65, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)&(generatedDefaults[100]) } }, /* 11 / Basic / product url*/\
     { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x0001 } }, /* 12 / Basic / cluster revision*/\
-    { 0x0000, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_WRITABLE), { (uint8_t*)0x0000 } }, /* 13 / Identify / identify time*/\
-    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0001 } }, /* 14 / Identify / cluster revision*/\
-    { 0x0000, ZCL_BITMAP8_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0x00 } }, /* 15 / Groups / name support*/\
-    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0001 } }, /* 16 / Groups / cluster revision*/\
-    { 0x0000, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0x00 } }, /* 17 / Scenes / scene count*/\
-    { 0x0001, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0x00 } }, /* 18 / Scenes / current scene*/\
-    { 0x0002, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0000 } }, /* 19 / Scenes / current group*/\
-    { 0x0003, ZCL_BOOLEAN_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0x00 } }, /* 20 / Scenes / scene valid*/\
-    { 0x0004, ZCL_BITMAP8_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0x00 } }, /* 21 / Scenes / name support*/\
-    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0001 } }, /* 22 / Scenes / cluster revision*/\
-    { 0x0000, ZCL_BOOLEAN_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0x01 } }, /* 23 / On/off / on/off*/\
-    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0001 } }, /* 24 / On/off / cluster revision*/\
-    { 0x0000, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0xfe } }, /* 25 / Level Control / current level*/\
-    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0001 } }, /* 26 / Level Control / cluster revision*/\
-    { 0x0000, ZCL_IEEE_ADDRESS_ATTRIBUTE_TYPE, 8, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[148]) } }, /* 27 / Over the Air Bootloading / OTA Upgrade Server ID*/\
-    { 0x0001, ZCL_INT32U_ATTRIBUTE_TYPE, 4, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[156]) } }, /* 28 / Over the Air Bootloading / Offset (address) into the file*/\
-    { 0x0002, ZCL_INT32U_ATTRIBUTE_TYPE, 4, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[160]) } }, /* 29 / Over the Air Bootloading / OTA Current File Version*/\
-    { 0x0006, ZCL_ENUM8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x00 } }, /* 30 / Over the Air Bootloading / OTA Upgrade Status*/\
-    { 0x0007, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0000UL } }, /* 31 / Over the Air Bootloading / Manufacturer ID*/\
-    { 0x0008, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0000UL } }, /* 32 / Over the Air Bootloading / Image Type ID*/\
-    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001 } }, /* 33 / Over the Air Bootloading / cluster revision*/\
-    { 0x0010, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x14 } }, /* 34 / Green Power / gpp max proxy table entries*/\
-    { 0x0011, ZCL_LONG_OCTET_STRING_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0000 } }, /* 35 / Green Power / proxy table*/\
-    { 0x0016, ZCL_BITMAP24_ATTRIBUTE_TYPE, 3, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[164]) } }, /* 36 / Green Power / gpp functionality*/\
-    { 0x0017, ZCL_BITMAP24_ATTRIBUTE_TYPE, 3, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[167]) } }, /* 37 / Green Power / gpp active functionality*/\
-    { 0x0022, ZCL_SECURITY_KEY_ATTRIBUTE_TYPE, 16, (ATTRIBUTE_MASK_WRITABLE|ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[170]) } }, /* 38 / Green Power / gp link key*/\
-    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001 } }, /* 39 / Green Power / cluster revision*/\
+    { 0x0020, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x00UL } }, /* 13 / Power Configuration / battery voltage*/\
+    { 0x0031, ZCL_ENUM8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_WRITABLE|ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x03 } }, /* 14 / Power Configuration / battery size*/\
+    { 0x0033, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_WRITABLE|ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)2 } }, /* 15 / Power Configuration / battery quantity*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_SINGLETON), { (uint8_t*)0x0001 } }, /* 16 / Power Configuration / cluster revision*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001 } }, /* 17 / Identify / cluster revision*/\
+    { 0x0000, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_WRITABLE), { (uint8_t*)0x0000 } }, /* 18 / Identify / identify time*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0001 } }, /* 19 / Identify / cluster revision*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001 } }, /* 20 / On/off / cluster revision*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001 } }, /* 21 / Level Control / cluster revision*/\
+    { 0x0000, ZCL_IEEE_ADDRESS_ATTRIBUTE_TYPE, 8, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[165]) } }, /* 22 / Over the Air Bootloading / OTA Upgrade Server ID*/\
+    { 0x0001, ZCL_INT32U_ATTRIBUTE_TYPE, 4, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[173]) } }, /* 23 / Over the Air Bootloading / Offset (address) into the file*/\
+    { 0x0002, ZCL_INT32U_ATTRIBUTE_TYPE, 4, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[177]) } }, /* 24 / Over the Air Bootloading / OTA Current File Version*/\
+    { 0x0006, ZCL_ENUM8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x00 } }, /* 25 / Over the Air Bootloading / OTA Upgrade Status*/\
+    { 0x0007, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x121C } }, /* 26 / Over the Air Bootloading / Manufacturer ID*/\
+    { 0x0008, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x1414 } }, /* 27 / Over the Air Bootloading / Image Type ID*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001 } }, /* 28 / Over the Air Bootloading / cluster revision*/\
+    { 0x0010, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x14 } }, /* 29 / Green Power / gpp max proxy table entries*/\
+    { 0x0011, ZCL_LONG_OCTET_STRING_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0000 } }, /* 30 / Green Power / proxy table*/\
+    { 0x0016, ZCL_BITMAP24_ATTRIBUTE_TYPE, 3, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[181]) } }, /* 31 / Green Power / gpp functionality*/\
+    { 0x0017, ZCL_BITMAP24_ATTRIBUTE_TYPE, 3, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[184]) } }, /* 32 / Green Power / gpp active functionality*/\
+    { 0x0022, ZCL_SECURITY_KEY_ATTRIBUTE_TYPE, 16, (ATTRIBUTE_MASK_WRITABLE|ATTRIBUTE_MASK_CLIENT), { (uint8_t*)&(generatedDefaults[187]) } }, /* 33 / Green Power / gp link key*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001 } }, /* 34 / Green Power / cluster revision*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (ATTRIBUTE_MASK_CLIENT), { (uint8_t*)0x0001 } }, /* 35 / Color Control / cluster revision*/\
+    { 0x0000, ZCL_INT8U_ATTRIBUTE_TYPE, 1, (0x00), { (uint8_t*)0x00 } }, /* 36 / Color Control / current hue*/\
+    { 0x0003, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x616B } }, /* 37 / Color Control / current x*/\
+    { 0x0004, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x607D } }, /* 38 / Color Control / current y*/\
+    { 0x000F, ZCL_BITMAP8_ATTRIBUTE_TYPE, 1, (ATTRIBUTE_MASK_WRITABLE), { (uint8_t*)0x00 } }, /* 39 / Color Control / color control options*/\
+    { 0x400D, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0000UL } }, /* 40 / Color Control / couple color temp to level min-mireds*/\
+    { 0x400E, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0000UL } }, /* 41 / Color Control / start up color temperature mireds*/\
+    { 0xFFFD, ZCL_INT16U_ATTRIBUTE_TYPE, 2, (0x00), { (uint8_t*)0x0001 } }, /* 42 / Color Control / cluster revision*/\
   }
 
 
 // Cluster function static arrays
 #define GENERATED_FUNCTION_ARRAYS \
 PGM EmberAfGenericClusterFunction emberAfFuncArrayIdentifyClusterServer[] = { (EmberAfGenericClusterFunction)emberAfIdentifyClusterServerInitCallback,(EmberAfGenericClusterFunction)emberAfIdentifyClusterServerAttributeChangedCallback}; \
-PGM EmberAfGenericClusterFunction emberAfFuncArrayGroupsClusterServer[] = { (EmberAfGenericClusterFunction)emberAfGroupsClusterServerInitCallback}; \
-PGM EmberAfGenericClusterFunction emberAfFuncArrayScenesClusterServer[] = { (EmberAfGenericClusterFunction)emberAfScenesClusterServerInitCallback}; \
-PGM EmberAfGenericClusterFunction emberAfFuncArrayOnOffClusterServer[] = { (EmberAfGenericClusterFunction)emberAfOnOffClusterServerInitCallback,(EmberAfGenericClusterFunction)emberAfOnOffClusterServerAttributeChangedCallback}; \
-PGM EmberAfGenericClusterFunction emberAfFuncArrayLevelControlClusterServer[] = { (EmberAfGenericClusterFunction)emberAfLevelControlClusterServerInitCallback,(EmberAfGenericClusterFunction)emberAfLevelControlClusterServerAttributeChangedCallback}; \
 PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = { (EmberAfGenericClusterFunction)emberAfOtaBootloadClusterClientInitCallback,(EmberAfGenericClusterFunction)emberAfOtaBootloadClusterClientDefaultResponseCallback}; \
+PGM EmberAfGenericClusterFunction emberAfFuncArrayColorControlClusterServer[] = { (EmberAfGenericClusterFunction)emberAfColorControlClusterServerInitCallback}; \
 
 
 // Clusters definitions
 #define GENERATED_CLUSTERS { \
     { 0x0000, (EmberAfAttributeMetadata*)&(generatedAttributes[0]), 13, 0, (CLUSTER_MASK_SERVER), NULL,  },    \
-    { 0x0003, (EmberAfAttributeMetadata*)&(generatedAttributes[13]), 2, 4, (CLUSTER_MASK_SERVER| CLUSTER_MASK_INIT_FUNCTION| CLUSTER_MASK_ATTRIBUTE_CHANGED_FUNCTION), emberAfFuncArrayIdentifyClusterServer, },    \
-    { 0x0004, (EmberAfAttributeMetadata*)&(generatedAttributes[15]), 2, 3, (CLUSTER_MASK_SERVER| CLUSTER_MASK_INIT_FUNCTION), emberAfFuncArrayGroupsClusterServer, },    \
-    { 0x0005, (EmberAfAttributeMetadata*)&(generatedAttributes[17]), 6, 8, (CLUSTER_MASK_SERVER| CLUSTER_MASK_INIT_FUNCTION), emberAfFuncArrayScenesClusterServer, },    \
-    { 0x0006, (EmberAfAttributeMetadata*)&(generatedAttributes[23]), 2, 3, (CLUSTER_MASK_SERVER| CLUSTER_MASK_INIT_FUNCTION| CLUSTER_MASK_ATTRIBUTE_CHANGED_FUNCTION), emberAfFuncArrayOnOffClusterServer, },    \
-    { 0x0008, (EmberAfAttributeMetadata*)&(generatedAttributes[25]), 2, 3, (CLUSTER_MASK_SERVER| CLUSTER_MASK_INIT_FUNCTION| CLUSTER_MASK_ATTRIBUTE_CHANGED_FUNCTION), emberAfFuncArrayLevelControlClusterServer, },    \
-    { 0x0019, (EmberAfAttributeMetadata*)&(generatedAttributes[27]), 7, 23, (CLUSTER_MASK_CLIENT| CLUSTER_MASK_INIT_FUNCTION| CLUSTER_MASK_DEFAULT_RESPONSE_FUNCTION), emberAfFuncArrayOtaBootloadClusterClient, },    \
-    { 0x0021, (EmberAfAttributeMetadata*)&(generatedAttributes[34]), 6, 27, (CLUSTER_MASK_CLIENT), NULL,  },    \
+    { 0x0001, (EmberAfAttributeMetadata*)&(generatedAttributes[13]), 4, 0, (CLUSTER_MASK_SERVER), NULL,  },    \
+    { 0x0003, (EmberAfAttributeMetadata*)&(generatedAttributes[17]), 1, 2, (CLUSTER_MASK_CLIENT), NULL,  },    \
+    { 0x0003, (EmberAfAttributeMetadata*)&(generatedAttributes[18]), 2, 4, (CLUSTER_MASK_SERVER| CLUSTER_MASK_INIT_FUNCTION| CLUSTER_MASK_ATTRIBUTE_CHANGED_FUNCTION), emberAfFuncArrayIdentifyClusterServer, },    \
+    { 0x0006, (EmberAfAttributeMetadata*)&(generatedAttributes[20]), 1, 2, (CLUSTER_MASK_CLIENT), NULL,  },    \
+    { 0x0008, (EmberAfAttributeMetadata*)&(generatedAttributes[21]), 1, 2, (CLUSTER_MASK_CLIENT), NULL,  },    \
+    { 0x0019, (EmberAfAttributeMetadata*)&(generatedAttributes[22]), 7, 23, (CLUSTER_MASK_CLIENT| CLUSTER_MASK_INIT_FUNCTION| CLUSTER_MASK_DEFAULT_RESPONSE_FUNCTION), emberAfFuncArrayOtaBootloadClusterClient, },    \
+    { 0x0300, (EmberAfAttributeMetadata*)&(generatedAttributes[35]), 1, 2, (CLUSTER_MASK_CLIENT), NULL,  },    \
+    { 0x0300, (EmberAfAttributeMetadata*)&(generatedAttributes[36]), 7, 12, (CLUSTER_MASK_SERVER| CLUSTER_MASK_INIT_FUNCTION), emberAfFuncArrayColorControlClusterServer, },    \
+    { 0x0021, (EmberAfAttributeMetadata*)&(generatedAttributes[29]), 6, 27, (CLUSTER_MASK_CLIENT), NULL,  },    \
   }
 
 
 // Endpoint types
 #define GENERATED_ENDPOINT_TYPES {        \
-    { (EmberAfCluster*)&(generatedClusters[0]), 7, 44 }, \
-    { (EmberAfCluster*)&(generatedClusters[7]), 1, 27 }, \
+    { (EmberAfCluster*)&(generatedClusters[0]), 9, 47 }, \
+    { (EmberAfCluster*)&(generatedClusters[9]), 1, 27 }, \
   }
 
 
@@ -149,10 +153,10 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
 // Largest attribute size is needed for various buffers
 #define ATTRIBUTE_LARGEST (65)
 // Total size of singleton attributes
-#define ATTRIBUTE_SINGLETONS_SIZE (174)
+#define ATTRIBUTE_SINGLETONS_SIZE (179)
 
 // Total size of attribute storage
-#define ATTRIBUTE_MAX_SIZE 71
+#define ATTRIBUTE_MAX_SIZE 74
 
 // Array of endpoints that are supported
 #define FIXED_ENDPOINT_ARRAY { 1, 242 }
@@ -161,7 +165,7 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
 #define FIXED_PROFILE_IDS { 260, 41440 }
 
 // Array of device ids
-#define FIXED_DEVICE_IDS { 257, 97 }
+#define FIXED_DEVICE_IDS { 261, 97 }
 
 // Array of device versions
 #define FIXED_DEVICE_VERSIONS { 0, 0 }
@@ -176,8 +180,9 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
 // Code used to configure the cluster event mechanism
 #define EMBER_AF_GENERATED_EVENT_CODE \
   EmberEventControl emberAfIdentifyClusterServerTickCallbackControl1; \
-  EmberEventControl emberAfLevelControlClusterServerTickCallbackControl1; \
   EmberEventControl emberAfOtaBootloadClusterClientTickCallbackControl1; \
+  EmberEventControl emberAfColorControlClusterServerTickCallbackControl1; \
+  extern EmberEventControl emberAfPluginBatteryMonitorReadADCEventControl; \
   extern EmberEventControl emberAfPluginConnectionManagerPollEventControl; \
   extern EmberEventControl emberAfPluginConnectionManagerRebootEventControl; \
   extern EmberEventControl emberAfPluginConnectionManagerRejoinEventControl; \
@@ -190,6 +195,7 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
   extern EmberEventControl emberAfPluginOtaStorageSimpleEepromPageEraseEventControl; \
   extern EmberEventControl emberAfPluginReportingTickEventControl; \
   extern EmberEventControl emberAfPluginScanDispatchScanEventControl; \
+  extern void emberAfPluginBatteryMonitorReadADCEventHandler(void); \
   extern void emberAfPluginConnectionManagerPollEventHandler(void); \
   extern void emberAfPluginConnectionManagerRebootEventHandler(void); \
   extern void emberAfPluginConnectionManagerRejoinEventHandler(void); \
@@ -202,8 +208,6 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
   extern void emberAfPluginOtaStorageSimpleEepromPageEraseEventHandler(void); \
   extern void emberAfPluginReportingTickEventHandler(void); \
   extern void emberAfPluginScanDispatchScanEventHandler(void); \
-  extern EmberEventControl eventIdentifyControl; \
-  extern void eventIdentifyCallback(void); \
   static void clusterTickWrapper(EmberEventControl *control, EmberAfTickFunction callback, uint8_t endpoint) \
   { \
     emberAfPushEndpointNetworkIndex(endpoint); \
@@ -212,15 +216,16 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
     emberAfPopNetworkIndex(); \
   } \
   void emberAfIdentifyClusterServerTickCallbackWrapperFunction1(void) { clusterTickWrapper(&emberAfIdentifyClusterServerTickCallbackControl1, emberAfIdentifyClusterServerTickCallback, 1); } \
-  void emberAfLevelControlClusterServerTickCallbackWrapperFunction1(void) { clusterTickWrapper(&emberAfLevelControlClusterServerTickCallbackControl1, emberAfLevelControlClusterServerTickCallback, 1); } \
   void emberAfOtaBootloadClusterClientTickCallbackWrapperFunction1(void) { clusterTickWrapper(&emberAfOtaBootloadClusterClientTickCallbackControl1, emberAfOtaBootloadClusterClientTickCallback, 1); } \
+  void emberAfColorControlClusterServerTickCallbackWrapperFunction1(void) { clusterTickWrapper(&emberAfColorControlClusterServerTickCallbackControl1, emberAfColorControlClusterServerTickCallback, 1); } \
 
 
 // EmberEventData structs used to populate the EmberEventData table
 #define EMBER_AF_GENERATED_EVENTS   \
   { &emberAfIdentifyClusterServerTickCallbackControl1, emberAfIdentifyClusterServerTickCallbackWrapperFunction1 }, \
-  { &emberAfLevelControlClusterServerTickCallbackControl1, emberAfLevelControlClusterServerTickCallbackWrapperFunction1 }, \
   { &emberAfOtaBootloadClusterClientTickCallbackControl1, emberAfOtaBootloadClusterClientTickCallbackWrapperFunction1 }, \
+  { &emberAfColorControlClusterServerTickCallbackControl1, emberAfColorControlClusterServerTickCallbackWrapperFunction1 }, \
+  { &emberAfPluginBatteryMonitorReadADCEventControl, emberAfPluginBatteryMonitorReadADCEventHandler }, \
   { &emberAfPluginConnectionManagerPollEventControl, emberAfPluginConnectionManagerPollEventHandler }, \
   { &emberAfPluginConnectionManagerRebootEventControl, emberAfPluginConnectionManagerRebootEventHandler }, \
   { &emberAfPluginConnectionManagerRejoinEventControl, emberAfPluginConnectionManagerRejoinEventHandler }, \
@@ -233,13 +238,13 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
   { &emberAfPluginOtaStorageSimpleEepromPageEraseEventControl, emberAfPluginOtaStorageSimpleEepromPageEraseEventHandler }, \
   { &emberAfPluginReportingTickEventControl, emberAfPluginReportingTickEventHandler }, \
   { &emberAfPluginScanDispatchScanEventControl, emberAfPluginScanDispatchScanEventHandler }, \
-  { &eventIdentifyControl, eventIdentifyCallback }, \
 
 
 #define EMBER_AF_GENERATED_EVENT_STRINGS   \
   "Identify Cluster Server EP 1",  \
-  "Level Control Cluster Server EP 1",  \
   "Over the Air Bootloading Cluster Client EP 1",  \
+  "Color Control Cluster Server EP 1",  \
+  "Battery Monitor Plugin ReadADC",  \
   "Connection Manager Plugin Poll",  \
   "Connection Manager Plugin Reboot",  \
   "Connection Manager Plugin Rejoin",  \
@@ -252,7 +257,6 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
   "OTA Simple Storage EEPROM Driver Plugin PageErase",  \
   "Reporting Plugin Tick",  \
   "Scan Dispatch Plugin Scan",  \
-  "eventIdentifyControl Custom",  \
 
 
 // The length of the event context table used to track and retrieve cluster events
@@ -260,8 +264,8 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
 
 // EmberAfEventContext structs used to populate the EmberAfEventContext table
 #define EMBER_AF_GENERATED_EVENT_CONTEXT { 0x1, 0x3, false, EMBER_AF_LONG_POLL, EMBER_AF_OK_TO_SLEEP, &emberAfIdentifyClusterServerTickCallbackControl1}, \
-{ 0x1, 0x8, false, EMBER_AF_LONG_POLL, EMBER_AF_OK_TO_SLEEP, &emberAfLevelControlClusterServerTickCallbackControl1}, \
-{ 0x1, 0x19, true, EMBER_AF_LONG_POLL, EMBER_AF_OK_TO_SLEEP, &emberAfOtaBootloadClusterClientTickCallbackControl1}
+{ 0x1, 0x19, true, EMBER_AF_LONG_POLL, EMBER_AF_OK_TO_SLEEP, &emberAfOtaBootloadClusterClientTickCallbackControl1}, \
+{ 0x1, 0x300, false, EMBER_AF_LONG_POLL, EMBER_AF_OK_TO_SLEEP, &emberAfColorControlClusterServerTickCallbackControl1}
 
 
 #define EMBER_AF_GENERATED_PLUGIN_INIT_FUNCTION_DECLARATIONS \
@@ -270,6 +274,7 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
   void emberAfPluginReportingInitCallback(void); \
   void emberAfPluginConnectionManagerInitCallback(void); \
   void emberAfPluginCountersInitCallback(void); \
+  void emberAfPluginBatteryMonitorInitCallback(void); \
 
 
 #define EMBER_AF_GENERATED_PLUGIN_INIT_FUNCTION_CALLS \
@@ -278,6 +283,7 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
   emberAfPluginReportingInitCallback(); \
   emberAfPluginConnectionManagerInitCallback(); \
   emberAfPluginCountersInitCallback(); \
+  emberAfPluginBatteryMonitorInitCallback(); \
 
 
 #define EMBER_AF_GENERATED_PLUGIN_NCP_INIT_FUNCTION_DECLARATIONS \
@@ -318,43 +324,20 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
 // Generated data for the command discovery
 #define GENERATED_COMMANDS { \
     { 0x0000, 0x00, COMMAND_MASK_INCOMING_SERVER }, /* Basic / ResetToFactoryDefaults */ \
+    { 0x0003, 0x00, COMMAND_MASK_OUTGOING_CLIENT | COMMAND_MASK_INCOMING_SERVER }, /* Identify / Identify */ \
     { 0x0003, 0x00, COMMAND_MASK_OUTGOING_SERVER }, /* Identify / IdentifyQueryResponse */ \
-    { 0x0003, 0x00, COMMAND_MASK_INCOMING_SERVER }, /* Identify / Identify */ \
-    { 0x0003, 0x01, COMMAND_MASK_INCOMING_SERVER }, /* Identify / IdentifyQuery */ \
-    { 0x0004, 0x00, COMMAND_MASK_OUTGOING_SERVER }, /* Groups / AddGroupResponse */ \
-    { 0x0004, 0x00, COMMAND_MASK_INCOMING_SERVER }, /* Groups / AddGroup */ \
-    { 0x0004, 0x01, COMMAND_MASK_OUTGOING_SERVER }, /* Groups / ViewGroupResponse */ \
-    { 0x0004, 0x01, COMMAND_MASK_INCOMING_SERVER }, /* Groups / ViewGroup */ \
-    { 0x0004, 0x02, COMMAND_MASK_OUTGOING_SERVER }, /* Groups / GetGroupMembershipResponse */ \
-    { 0x0004, 0x02, COMMAND_MASK_INCOMING_SERVER }, /* Groups / GetGroupMembership */ \
-    { 0x0004, 0x03, COMMAND_MASK_OUTGOING_SERVER }, /* Groups / RemoveGroupResponse */ \
-    { 0x0004, 0x03, COMMAND_MASK_INCOMING_SERVER }, /* Groups / RemoveGroup */ \
-    { 0x0004, 0x04, COMMAND_MASK_INCOMING_SERVER }, /* Groups / RemoveAllGroups */ \
-    { 0x0004, 0x05, COMMAND_MASK_INCOMING_SERVER }, /* Groups / AddGroupIfIdentifying */ \
-    { 0x0005, 0x00, COMMAND_MASK_OUTGOING_SERVER }, /* Scenes / AddSceneResponse */ \
-    { 0x0005, 0x00, COMMAND_MASK_INCOMING_SERVER }, /* Scenes / AddScene */ \
-    { 0x0005, 0x01, COMMAND_MASK_OUTGOING_SERVER }, /* Scenes / ViewSceneResponse */ \
-    { 0x0005, 0x01, COMMAND_MASK_INCOMING_SERVER }, /* Scenes / ViewScene */ \
-    { 0x0005, 0x02, COMMAND_MASK_OUTGOING_SERVER }, /* Scenes / RemoveSceneResponse */ \
-    { 0x0005, 0x02, COMMAND_MASK_INCOMING_SERVER }, /* Scenes / RemoveScene */ \
-    { 0x0005, 0x03, COMMAND_MASK_OUTGOING_SERVER }, /* Scenes / RemoveAllScenesResponse */ \
-    { 0x0005, 0x03, COMMAND_MASK_INCOMING_SERVER }, /* Scenes / RemoveAllScenes */ \
-    { 0x0005, 0x04, COMMAND_MASK_OUTGOING_SERVER }, /* Scenes / StoreSceneResponse */ \
-    { 0x0005, 0x04, COMMAND_MASK_INCOMING_SERVER }, /* Scenes / StoreScene */ \
-    { 0x0005, 0x05, COMMAND_MASK_INCOMING_SERVER }, /* Scenes / RecallScene */ \
-    { 0x0005, 0x06, COMMAND_MASK_OUTGOING_SERVER }, /* Scenes / GetSceneMembershipResponse */ \
-    { 0x0005, 0x06, COMMAND_MASK_INCOMING_SERVER }, /* Scenes / GetSceneMembership */ \
-    { 0x0006, 0x00, COMMAND_MASK_INCOMING_SERVER }, /* On/off / Off */ \
-    { 0x0006, 0x01, COMMAND_MASK_INCOMING_SERVER }, /* On/off / On */ \
-    { 0x0006, 0x02, COMMAND_MASK_INCOMING_SERVER }, /* On/off / Toggle */ \
-    { 0x0008, 0x00, COMMAND_MASK_INCOMING_SERVER }, /* Level Control / MoveToLevel */ \
-    { 0x0008, 0x01, COMMAND_MASK_INCOMING_SERVER }, /* Level Control / Move */ \
-    { 0x0008, 0x02, COMMAND_MASK_INCOMING_SERVER }, /* Level Control / Step */ \
-    { 0x0008, 0x03, COMMAND_MASK_INCOMING_SERVER }, /* Level Control / Stop */ \
-    { 0x0008, 0x04, COMMAND_MASK_INCOMING_SERVER }, /* Level Control / MoveToLevelWithOnOff */ \
-    { 0x0008, 0x05, COMMAND_MASK_INCOMING_SERVER }, /* Level Control / MoveWithOnOff */ \
-    { 0x0008, 0x06, COMMAND_MASK_INCOMING_SERVER }, /* Level Control / StepWithOnOff */ \
-    { 0x0008, 0x07, COMMAND_MASK_INCOMING_SERVER }, /* Level Control / StopWithOnOff */ \
+    { 0x0003, 0x01, COMMAND_MASK_OUTGOING_CLIENT | COMMAND_MASK_INCOMING_SERVER }, /* Identify / IdentifyQuery */ \
+    { 0x0006, 0x00, COMMAND_MASK_OUTGOING_CLIENT }, /* On/off / Off */ \
+    { 0x0006, 0x01, COMMAND_MASK_OUTGOING_CLIENT }, /* On/off / On */ \
+    { 0x0006, 0x02, COMMAND_MASK_OUTGOING_CLIENT }, /* On/off / Toggle */ \
+    { 0x0008, 0x00, COMMAND_MASK_OUTGOING_CLIENT }, /* Level Control / MoveToLevel */ \
+    { 0x0008, 0x01, COMMAND_MASK_OUTGOING_CLIENT }, /* Level Control / Move */ \
+    { 0x0008, 0x02, COMMAND_MASK_OUTGOING_CLIENT }, /* Level Control / Step */ \
+    { 0x0008, 0x03, COMMAND_MASK_OUTGOING_CLIENT }, /* Level Control / Stop */ \
+    { 0x0008, 0x04, COMMAND_MASK_OUTGOING_CLIENT }, /* Level Control / MoveToLevelWithOnOff */ \
+    { 0x0008, 0x05, COMMAND_MASK_OUTGOING_CLIENT }, /* Level Control / MoveWithOnOff */ \
+    { 0x0008, 0x06, COMMAND_MASK_OUTGOING_CLIENT }, /* Level Control / StepWithOnOff */ \
+    { 0x0008, 0x07, COMMAND_MASK_OUTGOING_CLIENT }, /* Level Control / StopWithOnOff */ \
     { 0x0019, 0x01, COMMAND_MASK_OUTGOING_CLIENT }, /* Over the Air Bootloading / QueryNextImageRequest */ \
     { 0x0019, 0x03, COMMAND_MASK_OUTGOING_CLIENT }, /* Over the Air Bootloading / ImageBlockRequest */ \
     { 0x0019, 0x06, COMMAND_MASK_OUTGOING_CLIENT }, /* Over the Air Bootloading / UpgradeEndRequest */ \
@@ -364,8 +347,18 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
     { 0x0021, 0x06, COMMAND_MASK_INCOMING_CLIENT }, /* Green Power / GpResponse */ \
     { 0x0021, 0x0A, COMMAND_MASK_INCOMING_CLIENT }, /* Green Power / GpSinkTableResponse */ \
     { 0x0021, 0x0B, COMMAND_MASK_INCOMING_CLIENT }, /* Green Power / GpProxyTableRequest */ \
+    { 0x0300, 0x00, COMMAND_MASK_INCOMING_SERVER }, /* Color Control / MoveToHue */ \
+    { 0x0300, 0x01, COMMAND_MASK_INCOMING_SERVER }, /* Color Control / MoveHue */ \
+    { 0x0300, 0x02, COMMAND_MASK_INCOMING_SERVER }, /* Color Control / StepHue */ \
+    { 0x0300, 0x03, COMMAND_MASK_INCOMING_SERVER }, /* Color Control / MoveToSaturation */ \
+    { 0x0300, 0x04, COMMAND_MASK_INCOMING_SERVER }, /* Color Control / MoveSaturation */ \
+    { 0x0300, 0x05, COMMAND_MASK_INCOMING_SERVER }, /* Color Control / StepSaturation */ \
+    { 0x0300, 0x06, COMMAND_MASK_INCOMING_SERVER }, /* Color Control / MoveToHueAndSaturation */ \
+    { 0x0300, 0x07, COMMAND_MASK_OUTGOING_CLIENT }, /* Color Control / MoveToColor */ \
+    { 0x0300, 0x08, COMMAND_MASK_OUTGOING_CLIENT }, /* Color Control / MoveColor */ \
+    { 0x0300, 0x09, COMMAND_MASK_OUTGOING_CLIENT }, /* Color Control / StepColor */ \
   }
-#define EMBER_AF_GENERATED_COMMAND_COUNT (47)
+#define EMBER_AF_GENERATED_COMMAND_COUNT (34)
 
 // Command manufacturer codes
 #define GENERATED_COMMAND_MANUFACTURER_CODES {      \
@@ -377,8 +370,9 @@ PGM EmberAfGenericClusterFunction emberAfFuncArrayOtaBootloadClusterClient[] = {
 // Generated reporting configuration defaults
 #define EMBER_AF_GENERATED_REPORTING_CONFIG_DEFAULTS {\
   { EMBER_ZCL_REPORTING_DIRECTION_REPORTED, 1, 0x0000, 0x0004, CLUSTER_MASK_SERVER, 0x0000, 1, 65534, 0 }, \
-  { EMBER_ZCL_REPORTING_DIRECTION_REPORTED, 1, 0x0006, 0x0000, CLUSTER_MASK_SERVER, 0x0000, 1, 65534, 0 }, \
-  { EMBER_ZCL_REPORTING_DIRECTION_REPORTED, 1, 0x0008, 0x0000, CLUSTER_MASK_SERVER, 0x0000, 1, 65534, 0 }, \
+  { EMBER_ZCL_REPORTING_DIRECTION_REPORTED, 1, 0x0300, 0x0000, CLUSTER_MASK_SERVER, 0x0000, 1, 65534, 0 }, \
+  { EMBER_ZCL_REPORTING_DIRECTION_REPORTED, 1, 0x0300, 0x0003, CLUSTER_MASK_SERVER, 0x0000, 1, 65534, 0 }, \
+  { EMBER_ZCL_REPORTING_DIRECTION_REPORTED, 1, 0x0300, 0x0004, CLUSTER_MASK_SERVER, 0x0000, 1, 65534, 0 }, \
 }
-#define EMBER_AF_GENERATED_REPORTING_CONFIG_DEFAULTS_TABLE_SIZE (3)
+#define EMBER_AF_GENERATED_REPORTING_CONFIG_DEFAULTS_TABLE_SIZE (4)
 #endif // SILABS_AF_ENDPOINT_CONFIG

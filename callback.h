@@ -25586,42 +25586,6 @@ void emberAfPluginOtaStorageSimpleEepromEraseCompleteCallback(bool success);
 /** @} END OTA Simple Storage EEPROM Driver Plugin Callbacks */
 
 
-/** @name Groups Server Cluster Plugin Callbacks */
-// @{
-
-/** @brief Get Group Name
- *
- * This function returns the name of a group with the provided group ID, should
- * it exist.
- *
- * @param endpoint Endpoint Ver.: always
- * @param groupId Group ID Ver.: always
- * @param groupName Group Name Ver.: always
- */
-void emberAfPluginGroupsServerGetGroupNameCallback(uint8_t endpoint,
-                                                   uint16_t groupId,
-                                                   uint8_t *groupName);
-/** @brief Set Group Name
- *
- * This function sets the name of a group with the provided group ID.
- *
- * @param endpoint Endpoint Ver.: always
- * @param groupId Group ID Ver.: always
- * @param groupName Group Name Ver.: always
- */
-void emberAfPluginGroupsServerSetGroupNameCallback(uint8_t endpoint,
-                                                   uint16_t groupId,
-                                                   uint8_t *groupName);
-/** @brief Group Names Supported
- *
- * This function returns whether or not group names are supported.
- *
- * @param endpoint Endpoint Ver.: always
- */
-bool emberAfPluginGroupsServerGroupNamesSupportedCallback(uint8_t endpoint);
-/** @} END Groups Server Cluster Plugin Callbacks */
-
-
 /** @name Reporting Plugin Callbacks */
 // @{
 
@@ -25683,43 +25647,6 @@ void emberAfPluginIdentifyStartFeedbackCallback(uint8_t endpoint,
  */
 void emberAfPluginIdentifyStopFeedbackCallback(uint8_t endpoint);
 /** @} END Identify Cluster Plugin Callbacks */
-
-
-/** @name Level Control Server Cluster Plugin Callbacks */
-// @{
-
-/** @brief Level Control Cluster Server Post Init
- *
- * Following resolution of the Current Level at startup for this endpoint,
- * perform any additional initialization needed; e.g., synchronize hardware
- * state.
- *
- * @param endpoint Endpoint that is being initialized  Ver.: always
- */
-void emberAfPluginLevelControlClusterServerPostInitCallback(uint8_t endpoint);
-/** @brief Level Control Coupled Color Temp Change
- *
- * Adjust Color Control cluster Color Temperature in response to a change in
- * Level Control cluster CurrentLevel.
- *
- * @param endpoint Endpoint that is being initialized  Ver.: always
- */
-void emberAfPluginLevelControlCoupledColorTempChangeCallback(uint8_t endpoint);
-/** @} END Level Control Server Cluster Plugin Callbacks */
-
-
-/** @name On/Off Server Cluster Plugin Callbacks */
-// @{
-
-/** @brief On/off Cluster Server Post Init
- *
- * Following resolution of the On/Off state at startup for this endpoint, perform any
- * additional initialization needed; e.g., synchronize hardware state.
- *
- * @param endpoint Endpoint that is being initialized  Ver.: always
- */
-void emberAfPluginOnOffClusterServerPostInitCallback(uint8_t endpoint);
-/** @} END On/Off Server Cluster Plugin Callbacks */
 
 
 /** @name Update TC Link Key Plugin Callbacks */
@@ -25867,6 +25794,36 @@ void emberAfPluginConnectionManagerLeaveNetworkCallback(void);
  */
 void emberAfPluginCountersRolloverCallback(EmberCounterType type);
 /** @} END Counters Plugin Callbacks */
+
+
+/** @name Battery Monitor Plugin Callbacks */
+// @{
+
+/** @brief Data Ready
+ *
+ * This function is called whenever the battery monitor has generated a new
+ * valid battery level
+ *
+ * @param batteryVoltageMilliV The battery voltage, in milli Volts  Ver.: always
+ */
+void emberAfPluginBatteryMonitorDataReadyCallback(uint16_t batteryVoltageMilliV);
+/** @} END Battery Monitor Plugin Callbacks */
+
+
+/** @name Color Control Cluster (deprecated) Plugin Callbacks */
+// @{
+
+/** @brief Is Color Supported
+ *
+ * This function will be called to determine whether a color is supported by a
+ * device. The color will be specified by hue and saturation.
+ *
+ * @param hue   Ver.: always
+ * @param saturation   Ver.: always
+ */
+bool emberAfPluginColorControlIsColorSupportedCallback(uint8_t hue,
+                                                       uint8_t saturation);
+/** @} END Color Control Cluster (deprecated) Plugin Callbacks */
 
 
 /** @name Basic Server Cluster Plugin Callbacks */

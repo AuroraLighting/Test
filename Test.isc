@@ -265,7 +265,7 @@ OverrideServer:6,exclude,Primary
 
 OverrideServer:7,exclude,Primary
 
-OverrideServer:8,exclude,Primary
+OverrideServer:8,include,Primary
 
 OverrideServer:9,exclude,Primary
 
@@ -474,6 +474,455 @@ EndpointType:GreenPower,97
 #  The ZCL device that this particular endpoint is implementing.
 DeviceType:GreenPower,GP-proxy-basic
 
+#  Type of the endpoint. Each endpoint implement one endpoint type. There can be
+#  one or more endpoint types, regardless of number of actual endpoints.
+EndpointType:Secondary,-1
+
+#  The ZCL device that this particular endpoint is implementing.
+DeviceType:Secondary,zcustom
+
+#  Overrides a particular client configuration. This happens when you have
+#  chosen to include/exclude a client cluster that is optional. Contains
+#  'clusterId', 'exclude/include' and the endpoint type name.
+OverrideClient:0,exclude,Secondary
+
+OverrideClient:1,exclude,Secondary
+
+OverrideClient:2,exclude,Secondary
+
+OverrideClient:3,include,Secondary
+
+OverrideClient:4,exclude,Secondary
+
+OverrideClient:5,exclude,Secondary
+
+OverrideClient:6,include,Secondary
+
+OverrideClient:7,exclude,Secondary
+
+OverrideClient:8,include,Secondary
+
+OverrideClient:9,exclude,Secondary
+
+OverrideClient:a,exclude,Secondary
+
+OverrideClient:b,exclude,Secondary
+
+OverrideClient:f,exclude,Secondary
+
+OverrideClient:15,exclude,Secondary
+
+OverrideClient:16,exclude,Secondary
+
+OverrideClient:19,exclude,Secondary
+
+OverrideClient:1a,exclude,Secondary
+
+OverrideClient:1b,exclude,Secondary
+
+OverrideClient:20,exclude,Secondary
+
+OverrideClient:21,exclude,Secondary
+
+OverrideClient:25,exclude,Secondary
+
+OverrideClient:100,exclude,Secondary
+
+OverrideClient:101,exclude,Secondary
+
+OverrideClient:102,exclude,Secondary
+
+OverrideClient:103,exclude,Secondary
+
+OverrideClient:200,exclude,Secondary
+
+OverrideClient:201,exclude,Secondary
+
+OverrideClient:202,exclude,Secondary
+
+OverrideClient:203,exclude,Secondary
+
+OverrideClient:204,exclude,Secondary
+
+OverrideClient:300,include,Secondary
+
+OverrideClient:301,exclude,Secondary
+
+OverrideClient:400,exclude,Secondary
+
+OverrideClient:401,exclude,Secondary
+
+OverrideClient:402,exclude,Secondary
+
+OverrideClient:403,exclude,Secondary
+
+OverrideClient:404,exclude,Secondary
+
+OverrideClient:405,exclude,Secondary
+
+OverrideClient:406,exclude,Secondary
+
+OverrideClient:40c,exclude,Secondary
+
+OverrideClient:40d,exclude,Secondary
+
+OverrideClient:40e,exclude,Secondary
+
+OverrideClient:40f,exclude,Secondary
+
+OverrideClient:410,exclude,Secondary
+
+OverrideClient:411,exclude,Secondary
+
+OverrideClient:412,exclude,Secondary
+
+OverrideClient:413,exclude,Secondary
+
+OverrideClient:414,exclude,Secondary
+
+OverrideClient:415,exclude,Secondary
+
+OverrideClient:416,exclude,Secondary
+
+OverrideClient:417,exclude,Secondary
+
+OverrideClient:418,exclude,Secondary
+
+OverrideClient:419,exclude,Secondary
+
+OverrideClient:41a,exclude,Secondary
+
+OverrideClient:41b,exclude,Secondary
+
+OverrideClient:41c,exclude,Secondary
+
+OverrideClient:41d,exclude,Secondary
+
+OverrideClient:41e,exclude,Secondary
+
+OverrideClient:41f,exclude,Secondary
+
+OverrideClient:420,exclude,Secondary
+
+OverrideClient:421,exclude,Secondary
+
+OverrideClient:422,exclude,Secondary
+
+OverrideClient:423,exclude,Secondary
+
+OverrideClient:424,exclude,Secondary
+
+OverrideClient:425,exclude,Secondary
+
+OverrideClient:426,exclude,Secondary
+
+OverrideClient:427,exclude,Secondary
+
+OverrideClient:428,exclude,Secondary
+
+OverrideClient:429,exclude,Secondary
+
+OverrideClient:500,exclude,Secondary
+
+OverrideClient:501,exclude,Secondary
+
+OverrideClient:502,exclude,Secondary
+
+OverrideClient:600,exclude,Secondary
+
+OverrideClient:601,exclude,Secondary
+
+OverrideClient:614,exclude,Secondary
+
+OverrideClient:615,exclude,Secondary
+
+OverrideClient:700,exclude,Secondary
+
+OverrideClient:701,exclude,Secondary
+
+OverrideClient:702,exclude,Secondary
+
+OverrideClient:703,exclude,Secondary
+
+OverrideClient:704,exclude,Secondary
+
+OverrideClient:705,exclude,Secondary
+
+OverrideClient:706,exclude,Secondary
+
+OverrideClient:707,exclude,Secondary
+
+OverrideClient:708,exclude,Secondary
+
+OverrideClient:709,exclude,Secondary
+
+OverrideClient:70a,exclude,Secondary
+
+OverrideClient:70b,exclude,Secondary
+
+OverrideClient:800,exclude,Secondary
+
+OverrideClient:900,exclude,Secondary
+
+OverrideClient:901,exclude,Secondary
+
+OverrideClient:902,exclude,Secondary
+
+OverrideClient:903,exclude,Secondary
+
+OverrideClient:904,exclude,Secondary
+
+OverrideClient:905,exclude,Secondary
+
+OverrideClient:a01,exclude,Secondary
+
+OverrideClient:a02,exclude,Secondary
+
+OverrideClient:b00,exclude,Secondary
+
+OverrideClient:b01,exclude,Secondary
+
+OverrideClient:b02,exclude,Secondary
+
+OverrideClient:b03,exclude,Secondary
+
+OverrideClient:b04,exclude,Secondary
+
+OverrideClient:b05,exclude,Secondary
+
+OverrideClient:1000,exclude,Secondary
+
+#  Overrides a particular client configuration for a manufacturer specific
+#  cluster. This happens when you have chosen to include/exclude a client
+#  cluster that is optional. Contains 'mfgCode', 'clusterId', 'exclude/include'
+#  and the endpoint type name.
+OverrideMfgClusterClient:1002,fc00,exclude,Secondary
+
+OverrideMfgClusterClient:1002,fc01,exclude,Secondary
+
+OverrideMfgClusterClient:1002,fc02,exclude,Secondary
+
+#  Overrides a particular server configuration. This happens when you have
+#  chosen to include/exclude a server cluster that is optional. Contains
+#  'clusterId', 'exclude/include' and the endpoint type name.
+OverrideServer:0,include,Secondary
+
+OverrideServer:1,exclude,Secondary
+
+OverrideServer:2,exclude,Secondary
+
+OverrideServer:3,include,Secondary
+
+OverrideServer:4,exclude,Secondary
+
+OverrideServer:5,exclude,Secondary
+
+OverrideServer:6,exclude,Secondary
+
+OverrideServer:7,exclude,Secondary
+
+OverrideServer:8,include,Secondary
+
+OverrideServer:9,exclude,Secondary
+
+OverrideServer:a,exclude,Secondary
+
+OverrideServer:b,exclude,Secondary
+
+OverrideServer:f,exclude,Secondary
+
+OverrideServer:15,exclude,Secondary
+
+OverrideServer:16,exclude,Secondary
+
+OverrideServer:19,exclude,Secondary
+
+OverrideServer:1a,exclude,Secondary
+
+OverrideServer:1b,exclude,Secondary
+
+OverrideServer:20,exclude,Secondary
+
+OverrideServer:21,exclude,Secondary
+
+OverrideServer:25,exclude,Secondary
+
+OverrideServer:100,exclude,Secondary
+
+OverrideServer:101,exclude,Secondary
+
+OverrideServer:102,exclude,Secondary
+
+OverrideServer:103,exclude,Secondary
+
+OverrideServer:200,exclude,Secondary
+
+OverrideServer:201,exclude,Secondary
+
+OverrideServer:202,exclude,Secondary
+
+OverrideServer:203,exclude,Secondary
+
+OverrideServer:204,exclude,Secondary
+
+OverrideServer:300,include,Secondary
+
+OverrideServer:301,exclude,Secondary
+
+OverrideServer:400,exclude,Secondary
+
+OverrideServer:401,exclude,Secondary
+
+OverrideServer:402,exclude,Secondary
+
+OverrideServer:403,exclude,Secondary
+
+OverrideServer:404,exclude,Secondary
+
+OverrideServer:405,exclude,Secondary
+
+OverrideServer:406,exclude,Secondary
+
+OverrideServer:40c,exclude,Secondary
+
+OverrideServer:40d,exclude,Secondary
+
+OverrideServer:40e,exclude,Secondary
+
+OverrideServer:40f,exclude,Secondary
+
+OverrideServer:410,exclude,Secondary
+
+OverrideServer:411,exclude,Secondary
+
+OverrideServer:412,exclude,Secondary
+
+OverrideServer:413,exclude,Secondary
+
+OverrideServer:414,exclude,Secondary
+
+OverrideServer:415,exclude,Secondary
+
+OverrideServer:416,exclude,Secondary
+
+OverrideServer:417,exclude,Secondary
+
+OverrideServer:418,exclude,Secondary
+
+OverrideServer:419,exclude,Secondary
+
+OverrideServer:41a,exclude,Secondary
+
+OverrideServer:41b,exclude,Secondary
+
+OverrideServer:41c,exclude,Secondary
+
+OverrideServer:41d,exclude,Secondary
+
+OverrideServer:41e,exclude,Secondary
+
+OverrideServer:41f,exclude,Secondary
+
+OverrideServer:420,exclude,Secondary
+
+OverrideServer:421,exclude,Secondary
+
+OverrideServer:422,exclude,Secondary
+
+OverrideServer:423,exclude,Secondary
+
+OverrideServer:424,exclude,Secondary
+
+OverrideServer:425,exclude,Secondary
+
+OverrideServer:426,exclude,Secondary
+
+OverrideServer:427,exclude,Secondary
+
+OverrideServer:428,exclude,Secondary
+
+OverrideServer:429,exclude,Secondary
+
+OverrideServer:500,exclude,Secondary
+
+OverrideServer:501,exclude,Secondary
+
+OverrideServer:502,exclude,Secondary
+
+OverrideServer:600,exclude,Secondary
+
+OverrideServer:601,exclude,Secondary
+
+OverrideServer:614,exclude,Secondary
+
+OverrideServer:615,exclude,Secondary
+
+OverrideServer:700,exclude,Secondary
+
+OverrideServer:701,exclude,Secondary
+
+OverrideServer:702,exclude,Secondary
+
+OverrideServer:703,exclude,Secondary
+
+OverrideServer:704,exclude,Secondary
+
+OverrideServer:705,exclude,Secondary
+
+OverrideServer:706,exclude,Secondary
+
+OverrideServer:707,exclude,Secondary
+
+OverrideServer:708,exclude,Secondary
+
+OverrideServer:709,exclude,Secondary
+
+OverrideServer:70a,exclude,Secondary
+
+OverrideServer:70b,exclude,Secondary
+
+OverrideServer:800,exclude,Secondary
+
+OverrideServer:900,exclude,Secondary
+
+OverrideServer:901,exclude,Secondary
+
+OverrideServer:902,exclude,Secondary
+
+OverrideServer:903,exclude,Secondary
+
+OverrideServer:904,exclude,Secondary
+
+OverrideServer:905,exclude,Secondary
+
+OverrideServer:a01,exclude,Secondary
+
+OverrideServer:a02,exclude,Secondary
+
+OverrideServer:b00,exclude,Secondary
+
+OverrideServer:b01,exclude,Secondary
+
+OverrideServer:b02,exclude,Secondary
+
+OverrideServer:b03,exclude,Secondary
+
+OverrideServer:b04,exclude,Secondary
+
+OverrideServer:b05,exclude,Secondary
+
+OverrideServer:1000,exclude,Secondary
+
+#  Overrides a particular server configuration for a manufacturer specific
+#  cluster. This happens when you have chosen to include/exclude a server
+#  cluster that is optional. Contains 'mfgCode', 'clusterId', 'exclude/include'
+#  and the endpoint type name.
+OverrideMfgClusterServer:1002,fc00,exclude,Secondary
+
+OverrideMfgClusterServer:1002,fc01,exclude,Secondary
+
+OverrideMfgClusterServer:1002,fc02,exclude,Secondary
+
 #  ZigBee PRO network configuration.  Each endpoint belongs to a single network
 #  configuration.  There can be one or more network configurations.
 ZigbeeProNetwork:*Primary,ZA_ROUTER,Z3
@@ -481,7 +930,7 @@ ZigbeeProNetwork:*Primary,ZA_ROUTER,Z3
 #  A list of optional attributes that are included in this configuration. Format
 #  is a list of "clusterId,attributeId,<server|client>,manufacturerCode"
 #  entries, separated by a colon.
-OptionalAttributes:0,1,server,0:0,2,server,0:0,3,server,0:0,4,server,0:0,6,server,0:0,11,server,0:0,10,server,0:0,9,server,0:0,8,server,0:0,5,server,0:25,2,client,0:25,7,client,0:25,8,client,0:768,0,server,0:1,32,server,0:1,49,server,0:1,51,server,0
+OptionalAttributes:0,1,server,0:0,2,server,0:0,3,server,0:0,4,server,0:0,6,server,0:0,11,server,0:0,10,server,0:0,9,server,0:0,8,server,0:0,5,server,0:25,2,client,0:25,7,client,0:25,8,client,0:768,0,server,0:1,32,server,0:1,49,server,0:1,51,server,0:8,16,server,0
 
 #  A list of attributes that are to be saved as tokens in persistent memory.
 #  Format is a list of "clusterId,attributeId,<server|client>,manufacturerCode"
@@ -492,7 +941,7 @@ FlashAttributes:0,19,server,0
 ReportableAttributes:0,4,server,0
 
 #  User defined default values for attributes.
-AttributeDefaults:6,0,server,0,0x01:8,0,server,0,0xfe:0,5,server,0,1GBatteryDimmer50AU:0,10,server,0,NPD4440:0,7,server,0,1:0,4,server,0,Aurora:0,11,server,0,www.auroralighting.com:0,1,server,0,0x01:0,2,server,0,0x02:0,3,server,0,0x01:0,6,server,0,20190502:25,2,client,0,1:25,7,client,0,0x121C:25,8,client,0,0x1414:1,49,server,0,0x03:1,51,server,0,2
+AttributeDefaults:6,0,server,0,0x01:8,0,server,0,0xfe:0,5,server,0,2GBatteryDimmer50AU:0,10,server,0,NPD4440:0,7,server,0,3:0,4,server,0,Aurora:0,11,server,0,www.auroralighting.com:0,1,server,0,0x01:0,2,server,0,0x02:0,3,server,0,0x01:0,6,server,0,25072019:25,2,client,0,1:25,7,client,0,0x121C:25,8,client,0,0x1413:1,49,server,0,0x03:1,51,server,0,2:8,16,server,0,100
 
 #  Lists the channels that this application will be configured to use.
 Channels:11
@@ -500,7 +949,7 @@ Channels:11
 #  Definitions of individual endpoints. For each endpoint the endpoint number
 #  (1-254) is listed, as well as the endpoint type that this endpoint will
 #  serve.
-ConfiguredEndpoints:*1&260&261&0&Primary&Primary,242&-1&-1&0&GreenPower&Primary
+ConfiguredEndpoints:*1&260&261&0&Primary&Primary,2&260&261&0&Secondary&Primary,242&-1&-1&0&GreenPower&Primary
 
 #  A single specification version for each profile defining the max version of
 #  the spec supported by this configuration.
@@ -1351,7 +1800,7 @@ AppPluginOption(efr32~family[M]~series[1]~device_configuration[3]~performance[P]
 
 AppPluginOption(efr32~family[M]~series[1]~device_configuration[3]~performance[P]~radio[732]~flash[512K]~temp[G]~package[M]~pins[48]+gcc):EMBER_AF_PLUGIN_OTA_STORAGE_SIMPLE_EEPROM_STORAGE_END,524288
 
-AppPluginOption(efr32~family[M]~series[1]~device_configuration[3]~performance[P]~radio[732]~flash[512K]~temp[G]~package[M]~pins[48]+gcc):EMBER_AF_PLUGIN_OTA_CLIENT_POLICY_IMAGE_TYPE_ID,5140
+AppPluginOption(efr32~family[M]~series[1]~device_configuration[3]~performance[P]~radio[732]~flash[512K]~temp[G]~package[M]~pins[48]+gcc):EMBER_AF_PLUGIN_OTA_CLIENT_POLICY_IMAGE_TYPE_ID,5139
 
 AppPluginOption(efr32~family[M]~series[1]~device_configuration[3]~performance[P]~radio[732]~flash[512K]~temp[G]~package[M]~pins[48]+gcc):EMBER_AF_PLUGIN_OTA_CLIENT_POLICY_FIRMWARE_VERSION,1
 

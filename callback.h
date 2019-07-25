@@ -25649,6 +25649,29 @@ void emberAfPluginIdentifyStopFeedbackCallback(uint8_t endpoint);
 /** @} END Identify Cluster Plugin Callbacks */
 
 
+/** @name Level Control Server Cluster Plugin Callbacks */
+// @{
+
+/** @brief Level Control Cluster Server Post Init
+ *
+ * Following resolution of the Current Level at startup for this endpoint,
+ * perform any additional initialization needed; e.g., synchronize hardware
+ * state.
+ *
+ * @param endpoint Endpoint that is being initialized  Ver.: always
+ */
+void emberAfPluginLevelControlClusterServerPostInitCallback(uint8_t endpoint);
+/** @brief Level Control Coupled Color Temp Change
+ *
+ * Adjust Color Control cluster Color Temperature in response to a change in
+ * Level Control cluster CurrentLevel.
+ *
+ * @param endpoint Endpoint that is being initialized  Ver.: always
+ */
+void emberAfPluginLevelControlCoupledColorTempChangeCallback(uint8_t endpoint);
+/** @} END Level Control Server Cluster Plugin Callbacks */
+
+
 /** @name Update TC Link Key Plugin Callbacks */
 // @{
 

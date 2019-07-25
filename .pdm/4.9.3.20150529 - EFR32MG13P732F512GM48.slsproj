@@ -72,11 +72,11 @@
   <includePath partCompatibility=".*efr32.*" languageCompatibility="c asm" uri="studio:/sdk/platform/Device/SiliconLabs/EFR32MG13P/Include"/>
   <includePath partCompatibility=".*ember.*" languageCompatibility="c asm" uri="studio:/sdk/platform/Device/SiliconLabs/efr32mg13p/Include"/>
   <includePath uri="studio:/sdk/platform/bootloader"/>
+  <includePath uri="studio:/sdk/platform/radio/rail_lib/protocol/ieee802154"/>
+  <includePath uri="studio:/sdk/platform/radio/rail_lib/protocol/ble"/>
   <includePath uri="studio:/sdk/platform/radio/rail_lib/common"/>
   <includePath uri="studio:/sdk/platform/radio/rail_lib/chip/efr32/rf/common/cortex"/>
   <includePath uri="studio:/sdk/platform/radio/rail_lib/chip/efr32"/>
-  <includePath uri="studio:/sdk/platform/radio/rail_lib/protocol/ieee802154"/>
-  <includePath uri="studio:/sdk/platform/radio/rail_lib/protocol/ble"/>
   <macroDefinition languageCompatibility="c asm" name="LOCAL_STORAGE_GECKO_INFO_PAGE_BTL" value="1"/>
   <macroDefinition languageCompatibility="c asm" name="ATTRIBUTE_STORAGE_CONFIGURATION" value="&quot;app/builder/Test/Test_endpoint_config.h&quot;"/>
   <macroDefinition languageCompatibility="c asm" name="CORTEXM3_EFR32MG13P732F512GM48" value="1"/>

@@ -526,6 +526,31 @@
 			<locationURI>STUDIO_SDK_LOC/platform/Device/SiliconLabs/EFR32MG13P/Source/system_efr32mg13p.c</locationURI>
 		</link>
 		<link>
+			<name>end-device-support/end-device-move.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/end-device-support/end-device-move.c</locationURI>
+		</link>
+		<link>
+			<name>end-device-support/end-device-support-cli.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/end-device-support/end-device-support-cli.c</locationURI>
+		</link>
+		<link>
+			<name>end-device-support/end-device-support.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/end-device-support/end-device-support.c</locationURI>
+		</link>
+		<link>
+			<name>end-device-support/polling-common.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/end-device-support/polling-common.c</locationURI>
+		</link>
+		<link>
+			<name>end-device-support/polling-soc.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/protocol/zigbee/app/framework/plugin/end-device-support/polling-soc.c</locationURI>
+		</link>
+		<link>
 			<name>external-generated-files/bootloader-interface-app.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/base/hal/micro/cortexm3/efm32/bootloader-interface-app.c</locationURI>

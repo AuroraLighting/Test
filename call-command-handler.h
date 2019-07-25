@@ -16,6 +16,9 @@ EmberAfStatus emberAfBasicClusterServerCommandParse(EmberAfClusterCommand *cmd);
 // Cluster: Identify, server
 EmberAfStatus emberAfIdentifyClusterServerCommandParse(EmberAfClusterCommand *cmd);
 
+// Cluster: Level Control, server
+EmberAfStatus emberAfLevelControlClusterServerCommandParse(EmberAfClusterCommand *cmd);
+
 // Cluster: Green Power, client
 EmberAfStatus emberAfGreenPowerClusterClientCommandParse(EmberAfClusterCommand *cmd);
 

@@ -831,64 +831,6 @@
 
 /** @} */ // end group zdo
 
-/** @addtogroup color-control Cluster Commands: Color Control
- * @ingroup cli
- * This group describes the CLI commands for the Color Control cluster. Listed
- * below is a description of the cluster:<br><br><i> Attributes and commands for
- * controlling the color properties of a color-capable light.</i>
- * 
- * @{
- */
-
-/** @} */ // end group color-control
-
-/** @addtogroup identify Cluster Commands: Identify
- * @ingroup cli
- * This group describes the CLI commands for the Identify cluster. Listed below
- * is a description of the cluster:<br><br><i> Attributes and commands for
- * putting a device into Identification mode (e.g. flashing a light).</i>
- * 
- * @{
- */
-
-/** @brief <b>zcl identify off [endpoint:1] </b>
- *   - <i>Writes the IdentifyTime attribute</i>
- *     - endpoint - INT8U - The endpoint on which to stop identifying
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_IDENTIFY_ZCL_IDENTIFY_OFF
-
-/** @brief <b>zcl identify on [endpoint:1] [time:2] </b>
- *   - <i>Writes the IdentifyTime attribute</i>
- *     - endpoint - INT8U - The endpoint on the device which should begin identifying
- *     - time - INT16U - The number of seconds to spend identifying
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_IDENTIFY_ZCL_IDENTIFY_ON
-
-/** @} */ // end group identify
-
-/** @addtogroup level-control Cluster Commands: Level Control
- * @ingroup cli
- * This group describes the CLI commands for the Level Control cluster. Listed
- * below is a description of the cluster:<br><br><i> Attributes and commands for
- * controlling devices that can be set to a level between fully 'On' and fully
- * 'Off.'</i>
- * 
- * @{
- */
-
-/** @} */ // end group level-control
-
-/** @addtogroup on-off Cluster Commands: On/off
- * @ingroup cli
- * This group describes the CLI commands for the On/off cluster. Listed below is
- * a description of the cluster:<br><br><i> Attributes and commands for
- * switching devices between 'On' and 'Off' states.</i>
- * 
- * @{
- */
-
-/** @} */ // end group on-off
-
 /** @addtogroup plugin-address-table Plugin Commands: Address Table
  * @ingroup cli
  * This plugin provides a set of APIs and CLI commands for managing the address
@@ -1095,6 +1037,26 @@
 #define EMBER_AF_DOXYGEN_CLI_COMMAND_PLUGIN_GREEN_POWER_CLIENT_PLUGIN_GREEN_POWER_CLIENT_SET_PROXY_ENTRY
 
 /** @} */ // end group plugin-green-power-client
+
+/** @addtogroup plugin-groups-server Plugin Commands: Groups Server
+ * @ingroup cli
+ * The groups server plugin contributes a CLI command to the application
+ * framework to be used for printing information related to groups.
+ * 
+ * @{
+ */
+
+/** @brief <b>plugin groups-server clear </b>
+ *   - <i>Clear the groups table on every endpoint.</i>
+ */
+#define EMBER_AF_DOXYGEN_CLI_COMMAND_PLUGIN_GROUPS_SERVER_PLUGIN_GROUPS_SERVER_CLEAR
+
+/** @brief <b>plugin groups-server print </b>
+ *   - <i>Print information about the contents of the groups table.</i>
+ */
+#define EMBER_AF_DOXYGEN_CLI_COMMAND_PLUGIN_GROUPS_SERVER_PLUGIN_GROUPS_SERVER_PRINT
+
+/** @} */ // end group plugin-groups-server
 
 /** @addtogroup plugin-identify Plugin Commands: Identify
  * @ingroup cli
@@ -1437,6 +1399,26 @@
 
 /** @} */ // end group plugin-reporting
 
+/** @addtogroup plugin-scenes Plugin Commands: Scenes Server
+ * @ingroup cli
+ * The Scenes server plugin contributes a CLI command to the application
+ * framework to be used for printing information related to scenes.
+ * 
+ * @{
+ */
+
+/** @brief <b>plugin scenes clear </b>
+ *   - <i>Clear the scenes table on every endpoint.</i>
+ */
+#define EMBER_AF_DOXYGEN_CLI_COMMAND_PLUGIN_SCENES_PLUGIN_SCENES_CLEAR
+
+/** @brief <b>plugin scenes print </b>
+ *   - <i>Print information about the contents of the scenes table.</i>
+ */
+#define EMBER_AF_DOXYGEN_CLI_COMMAND_PLUGIN_SCENES_PLUGIN_SCENES_PRINT
+
+/** @} */ // end group plugin-scenes
+
 /** @addtogroup attribute Attribute Management
  * @ingroup cli
  * Commands related to reading and writing attributes locally on a device.
@@ -1537,384 +1519,6 @@
 
 /** @} */ // end group zdo
 
-/** @addtogroup color-control Cluster Commands: Color Control
- * @ingroup cli
- * This group describes the CLI commands for the Color Control cluster. Listed
- * below is a description of the cluster:<br><br><i> Attributes and commands for
- * controlling the color properties of a color-capable light.</i>
- * 
- * @{
- */
-
-/** @brief <b>zcl color-control movetohue [hue:1] [direction:1] [transitionTime:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Move to specified hue.</i>
- *     - hue - INT8U
- *     - direction - HueDirection [ENUM8]
- *     - transitionTime - INT16U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- * @sa 
- * EmberAfHueDirection
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVETOHUE
-
-/** @brief <b>zcl color-control movehue [moveMode:1] [rate:1] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Move hue up or down at specified rate.</i>
- *     - moveMode - HueMoveMode [ENUM8]
- *     - rate - INT8U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- * @sa 
- * EmberAfHueMoveMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVEHUE
-
-/** @brief <b>zcl color-control stephue [stepMode:1] [stepSize:1] [transitionTime:1] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Step hue up or down by specified size at specified rate.</i>
- *     - stepMode - HueStepMode [ENUM8]
- *     - stepSize - INT8U
- *     - transitionTime - INT8U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- * @sa 
- * EmberAfHueStepMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_STEPHUE
-
-/** @brief <b>zcl color-control movetosat [saturation:1] [transitionTime:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Move to specified saturation.</i>
- *     - saturation - INT8U
- *     - transitionTime - INT16U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVETOSAT
-
-/** @brief <b>zcl color-control movesat [moveMode:1] [rate:1] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Move saturation up or down at specified rate.</i>
- *     - moveMode - SaturationMoveMode [ENUM8]
- *     - rate - INT8U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- * @sa 
- * EmberAfSaturationMoveMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVESAT
-
-/** @brief <b>zcl color-control stepsat [stepMode:1] [stepSize:1] [transitionTime:1] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Step saturation up or down by specified size at specified rate.</i>
- *     - stepMode - SaturationStepMode [ENUM8]
- *     - stepSize - INT8U
- *     - transitionTime - INT8U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- * @sa 
- * EmberAfSaturationStepMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_STEPSAT
-
-/** @brief <b>zcl color-control movetohueandsat [hue:1] [saturation:1] [transitionTime:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Move to hue and saturation.</i>
- *     - hue - INT8U
- *     - saturation - INT8U
- *     - transitionTime - INT16U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVETOHUEANDSAT
-
-/** @brief <b>zcl color-control movetocolor [colorX:2] [colorY:2] [transitionTime:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Move to specified color.</i>
- *     - colorX - INT16U
- *     - colorY - INT16U
- *     - transitionTime - INT16U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVETOCOLOR
-
-/** @brief <b>zcl color-control movecolor [rateX:2] [rateY:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Moves the color.</i>
- *     - rateX - INT16S
- *     - rateY - INT16S
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVECOLOR
-
-/** @brief <b>zcl color-control stepcolor [stepX:2] [stepY:2] [transitionTime:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Steps the lighting to a specific color.</i>
- *     - stepX - INT16S
- *     - stepY - INT16S
- *     - transitionTime - INT16U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_STEPCOLOR
-
-/** @brief <b>zcl color-control movetocolortemp [colorTemperature:2] [transitionTime:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Move to a specific color temperature.</i>
- *     - colorTemperature - INT16U
- *     - transitionTime - INT16U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVETOCOLORTEMP
-
-/** @brief <b>zcl color-control emovetohue [enhancedHue:2] [direction:1] [transitionTime:2] </b>
- *   - <i>Command description for EnhancedMoveToHue</i>
- *     - enhancedHue - INT16U
- *     - direction - HueDirection [ENUM8]
- *     - transitionTime - INT16U
- * @sa 
- * EmberAfHueDirection
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_EMOVETOHUE
-
-/** @brief <b>zcl color-control emovehue [moveMode:1] [rate:2] </b>
- *   - <i>Command description for EnhancedMoveHue</i>
- *     - moveMode - HueMoveMode [ENUM8]
- *     - rate - INT16U
- * @sa 
- * EmberAfHueMoveMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_EMOVEHUE
-
-/** @brief <b>zcl color-control estephue [stepMode:1] [stepSize:2] [transitionTime:2] </b>
- *   - <i>Command description for EnhancedStepHue</i>
- *     - stepMode - HueStepMode [ENUM8]
- *     - stepSize - INT16U
- *     - transitionTime - INT16U
- * @sa 
- * EmberAfHueStepMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_ESTEPHUE
-
-/** @brief <b>zcl color-control emovetohueandsat [enhancedHue:2] [saturation:1] [transitionTime:2] </b>
- *   - <i>Command description for EnhancedMoveToHueAndSaturation</i>
- *     - enhancedHue - INT16U
- *     - saturation - INT8U
- *     - transitionTime - INT16U
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_EMOVETOHUEANDSAT
-
-/** @brief <b>zcl color-control loop [updateFlags:1] [action:1] [direction:1] [time:2] [startHue:2] </b>
- *   - <i>Command description for ColorLoopSet</i>
- *     - updateFlags - ColorLoopUpdateFlags [BITMAP8]
- *     - action - ColorLoopAction [ENUM8]
- *     - direction - ColorLoopDirection [ENUM8]
- *     - time - INT16U
- *     - startHue - INT16U
- * @sa 
- * EmberAfColorLoopAction
- * EmberAfColorLoopDirection
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_LOOP
-
-/** @brief <b>zcl color-control stopmovestep [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Command description for StopMoveStep</i>
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_STOPMOVESTEP
-
-/** @brief <b>zcl color-control movecolortemp [moveMode:1] [rate:2] [colorTemperatureMinimum:2] [colorTemperatureMaximum:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Command description for MoveColorTemperature</i>
- *     - moveMode - HueMoveMode [ENUM8]
- *     - rate - INT16U
- *     - colorTemperatureMinimum - INT16U
- *     - colorTemperatureMaximum - INT16U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- * @sa 
- * EmberAfHueMoveMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_MOVECOLORTEMP
-
-/** @brief <b>zcl color-control stepcolortemp [stepMode:1] [stepSize:2] [transitionTime:2] [colorTemperatureMinimum:2] [colorTemperatureMaximum:2] [optionsMask:1] [optionsOverride:1] </b>
- *   - <i>Command description for StepColorTemperature</i>
- *     - stepMode - HueStepMode [ENUM8]
- *     - stepSize - INT16U
- *     - transitionTime - INT16U
- *     - colorTemperatureMinimum - INT16U
- *     - colorTemperatureMaximum - INT16U
- *     - optionsMask - BITMAP8
- *     - optionsOverride - BITMAP8
- * @sa 
- * EmberAfHueStepMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_COLOR_CONTROL_STEPCOLORTEMP
-
-/** @} */ // end group color-control
-
-/** @addtogroup identify Cluster Commands: Identify
- * @ingroup cli
- * This group describes the CLI commands for the Identify cluster. Listed below
- * is a description of the cluster:<br><br><i> Attributes and commands for
- * putting a device into Identification mode (e.g. flashing a light).</i>
- * 
- * @{
- */
-
-/** @brief <b>zcl identify id [identifyTime:2] </b>
- *   - <i>Command description for Identify</i>
- *     - identifyTime - INT16U
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_IDENTIFY_ID
-
-/** @brief <b>zcl identify query </b>
- *   - <i>Command description for IdentifyQuery</i>
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_IDENTIFY_QUERY
-
-/** @brief <b>zcl identify ez-mode [action:1] </b>
- *   - <i>Invoke EZMode on an Identify Server</i>
- *     - action - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_IDENTIFY_EZ_MODE
-
-/** @brief <b>zcl identify trigger [effectId:1] [effectVariant:1] </b>
- *   - <i>Command description for TriggerEffect</i>
- *     - effectId - IdentifyEffectIdentifier [ENUM8]
- *     - effectVariant - IdentifyEffectVariant [ENUM8]
- * @sa 
- * EmberAfIdentifyEffectIdentifier
- * EmberAfIdentifyEffectVariant
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_IDENTIFY_TRIGGER
-
-/** @} */ // end group identify
-
-/** @addtogroup level-control Cluster Commands: Level Control
- * @ingroup cli
- * This group describes the CLI commands for the Level Control cluster. Listed
- * below is a description of the cluster:<br><br><i> Attributes and commands for
- * controlling devices that can be set to a level between fully 'On' and fully
- * 'Off.'</i>
- * 
- * @{
- */
-
-/** @brief <b>zcl level-control mv-to-level [level:1] [transitionTime:2] [optionMask:1] [optionOverride:1] </b>
- *   - <i>Command description for MoveToLevel</i>
- *     - level - INT8U
- *     - transitionTime - INT16U
- *     - optionMask - BITMAP8
- *     - optionOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_LEVEL_CONTROL_MV_TO_LEVEL
-
-/** @brief <b>zcl level-control move [moveMode:1] [rate:1] [optionMask:1] [optionOverride:1] </b>
- *   - <i>Command description for Move</i>
- *     - moveMode - MoveMode [ENUM8]
- *     - rate - INT8U
- *     - optionMask - BITMAP8
- *     - optionOverride - BITMAP8
- * @sa 
- * EmberAfMoveMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_LEVEL_CONTROL_MOVE
-
-/** @brief <b>zcl level-control step [stepMode:1] [stepSize:1] [transitionTime:2] [optionMask:1] [optionOverride:1] </b>
- *   - <i>Command description for Step</i>
- *     - stepMode - StepMode [ENUM8]
- *     - stepSize - INT8U
- *     - transitionTime - INT16U
- *     - optionMask - BITMAP8
- *     - optionOverride - BITMAP8
- * @sa 
- * EmberAfStepMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_LEVEL_CONTROL_STEP
-
-/** @brief <b>zcl level-control stop [optionMask:1] [optionOverride:1] </b>
- *   - <i>Command description for Stop</i>
- *     - optionMask - BITMAP8
- *     - optionOverride - BITMAP8
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_LEVEL_CONTROL_STOP
-
-/** @brief <b>zcl level-control o-mv-to-level [level:1] [transitionTime:2] </b>
- *   - <i>Command description for MoveToLevelWithOnOff</i>
- *     - level - INT8U
- *     - transitionTime - INT16U
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_LEVEL_CONTROL_O_MV_TO_LEVEL
-
-/** @brief <b>zcl level-control o-move [moveMode:1] [rate:1] </b>
- *   - <i>Command description for MoveWithOnOff</i>
- *     - moveMode - MoveMode [ENUM8]
- *     - rate - INT8U
- * @sa 
- * EmberAfMoveMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_LEVEL_CONTROL_O_MOVE
-
-/** @brief <b>zcl level-control o-step [stepMode:1] [stepSize:1] [transitionTime:2] </b>
- *   - <i>Command description for StepWithOnOff</i>
- *     - stepMode - StepMode [ENUM8]
- *     - stepSize - INT8U
- *     - transitionTime - INT16U
- * @sa 
- * EmberAfStepMode
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_LEVEL_CONTROL_O_STEP
-
-/** @brief <b>zcl level-control o-stop </b>
- *   - <i>Command description for StopWithOnOff</i>
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_LEVEL_CONTROL_O_STOP
-
-/** @} */ // end group level-control
-
-/** @addtogroup on-off Cluster Commands: On/off
- * @ingroup cli
- * This group describes the CLI commands for the On/off cluster. Listed below is
- * a description of the cluster:<br><br><i> Attributes and commands for
- * switching devices between 'On' and 'Off' states.</i>
- * 
- * @{
- */
-
-/** @brief <b>zcl on-off off </b>
- *   - <i>Command description for Off</i>
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_ON/OFF_OFF
-
-/** @brief <b>zcl on-off on </b>
- *   - <i>Command description for On</i>
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_ON/OFF_ON
-
-/** @brief <b>zcl on-off toggle </b>
- *   - <i>Command description for Toggle</i>
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_ON/OFF_TOGGLE
-
-/** @brief <b>zcl on-off offeffect [effectId:1] [effectVariant:1] </b>
- *   - <i>Command description for OffWithEffect</i>
- *     - effectId - OnOffEffectIdentifier [ENUM8]
- *     - effectVariant - ENUM8
- * @sa 
- * EmberAfOnOffEffectIdentifier
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_ON/OFF_OFFEFFECT
-
-/** @brief <b>zcl on-off onrecall </b>
- *   - <i>Command description for OnWithRecallGlobalScene</i>
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_ON/OFF_ONRECALL
-
-/** @brief <b>zcl on-off ontimedoff [onOffControl:1] [onTime:2] [offWaitTime:2] </b>
- *   - <i>Command description for OnWithTimedOff</i>
- *     - onOffControl - OnOffControl [BITMAP8]
- *     - onTime - INT16U
- *     - offWaitTime - INT16U
- */
-#define EMBER_AF_DOXYGEN_CLI_COMMAND_ON/OFF_ONTIMEDOFF
-
-/** @} */ // end group on-off
-
 /** @addtogroup plugin-address-table Plugin Commands: Address Table
  * @ingroup cli
  * This plugin provides a set of APIs and CLI commands for managing the address
@@ -1964,6 +1568,16 @@
  */
 
 /** @} */ // end group plugin-green-power-client
+
+/** @addtogroup plugin-groups-server Plugin Commands: Groups Server
+ * @ingroup cli
+ * The groups server plugin contributes a CLI command to the application
+ * framework to be used for printing information related to groups.
+ * 
+ * @{
+ */
+
+/** @} */ // end group plugin-groups-server
 
 /** @addtogroup plugin-identify Plugin Commands: Identify
  * @ingroup cli
@@ -2044,6 +1658,16 @@
  */
 
 /** @} */ // end group plugin-reporting
+
+/** @addtogroup plugin-scenes Plugin Commands: Scenes Server
+ * @ingroup cli
+ * The Scenes server plugin contributes a CLI command to the application
+ * framework to be used for printing information related to scenes.
+ * 
+ * @{
+ */
+
+/** @} */ // end group plugin-scenes
 
 
 /** @} END addtogroup */

@@ -8,6 +8,8 @@
 #include "app/framework/cli/custom-cli.h"
 
 
+void emAfGroupsServerCliClear(void);
+void emAfGroupsServerCliPrint(void);
 void emAfMfglibEnableMfglib(void);
 void emAfMfglibProgramEuiCommand(void);
 void emAfMfglibSendCommand(void);
@@ -39,6 +41,8 @@ void emAfPluginReportingCliClear(void);
 void emAfPluginReportingCliClearLastReportTime(void);
 void emAfPluginReportingCliPrint(void);
 void emAfPluginReportingCliRemove(void);
+void emAfPluginScenesServerClear(void);
+void emAfPluginScenesServerPrintInfo(void);
 void emAfSendImageBlockRequestTest(void);
 void emberAfPluginGreenPowerClientAddGroupcastSink(void);
 void emberAfPluginGreenPowerClientAddSink(void);
@@ -68,309 +72,7 @@ static void zclBasicGlsrCommand(void) {
                           ZCL_GET_LOCALES_SUPPORTED_RESPONSE_COMMAND_ID);
 }
 
-static void zclColorControlEmovehueCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_ENHANCED_MOVE_HUE_COMMAND_ID);
-}
-
-static void zclColorControlEmovetohueCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_ENHANCED_MOVE_TO_HUE_COMMAND_ID);
-}
-
-static void zclColorControlEmovetohueandsatCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_ENHANCED_MOVE_TO_HUE_AND_SATURATION_COMMAND_ID);
-}
-
-static void zclColorControlEstephueCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_ENHANCED_STEP_HUE_COMMAND_ID);
-}
-
-static void zclColorControlLoopCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_COLOR_LOOP_SET_COMMAND_ID);
-}
-
-static void zclColorControlMovecolorCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_COLOR_COMMAND_ID);
-}
-
-static void zclColorControlMovecolortempCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_COLOR_TEMPERATURE_COMMAND_ID);
-}
-
-static void zclColorControlMovehueCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_HUE_COMMAND_ID);
-}
-
-static void zclColorControlMovesatCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_SATURATION_COMMAND_ID);
-}
-
-static void zclColorControlMovetocolorCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_TO_COLOR_COMMAND_ID);
-}
-
-static void zclColorControlMovetocolortempCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_TO_COLOR_TEMPERATURE_COMMAND_ID);
-}
-
-static void zclColorControlMovetohueCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_TO_HUE_COMMAND_ID);
-}
-
-static void zclColorControlMovetohueandsatCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_TO_HUE_AND_SATURATION_COMMAND_ID);
-}
-
-static void zclColorControlMovetosatCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_TO_SATURATION_COMMAND_ID);
-}
-
-static void zclColorControlStepcolorCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_STEP_COLOR_COMMAND_ID);
-}
-
-static void zclColorControlStepcolortempCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_STEP_COLOR_TEMPERATURE_COMMAND_ID);
-}
-
-static void zclColorControlStephueCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_STEP_HUE_COMMAND_ID);
-}
-
-static void zclColorControlStepsatCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_STEP_SATURATION_COMMAND_ID);
-}
-
-static void zclColorControlStopmovestepCommand(void) {
-  zclSimpleClientCommand( ZCL_COLOR_CONTROL_CLUSTER_ID,
-                          ZCL_STOP_MOVE_STEP_COMMAND_ID);
-}
-
-static void zclIdentifyEzModeCommand(void) {
-  zclSimpleClientCommand( ZCL_IDENTIFY_CLUSTER_ID,
-                          ZCL_E_Z_MODE_INVOKE_COMMAND_ID);
-}
-
-static void zclIdentifyIdCommand(void) {
-  zclSimpleClientCommand( ZCL_IDENTIFY_CLUSTER_ID,
-                          ZCL_IDENTIFY_COMMAND_ID);
-}
-
 void zclIdentifyOnOffCommand(void);
-static void zclIdentifyQueryCommand(void) {
-  zclSimpleClientCommand( ZCL_IDENTIFY_CLUSTER_ID,
-                          ZCL_IDENTIFY_QUERY_COMMAND_ID);
-}
-
-static void zclIdentifyTriggerCommand(void) {
-  zclSimpleClientCommand( ZCL_IDENTIFY_CLUSTER_ID,
-                          ZCL_TRIGGER_EFFECT_COMMAND_ID);
-}
-
-static void zclLevelControlMoveCommand(void) {
-  zclSimpleClientCommand( ZCL_LEVEL_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_COMMAND_ID);
-}
-
-static void zclLevelControlMvToLevelCommand(void) {
-  zclSimpleClientCommand( ZCL_LEVEL_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_TO_LEVEL_COMMAND_ID);
-}
-
-static void zclLevelControlOMoveCommand(void) {
-  zclSimpleClientCommand( ZCL_LEVEL_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_WITH_ON_OFF_COMMAND_ID);
-}
-
-static void zclLevelControlOMvToLevelCommand(void) {
-  zclSimpleClientCommand( ZCL_LEVEL_CONTROL_CLUSTER_ID,
-                          ZCL_MOVE_TO_LEVEL_WITH_ON_OFF_COMMAND_ID);
-}
-
-static void zclLevelControlOStepCommand(void) {
-  zclSimpleClientCommand( ZCL_LEVEL_CONTROL_CLUSTER_ID,
-                          ZCL_STEP_WITH_ON_OFF_COMMAND_ID);
-}
-
-static void zclLevelControlOStopCommand(void) {
-  zclSimpleClientCommand( ZCL_LEVEL_CONTROL_CLUSTER_ID,
-                          ZCL_STOP_WITH_ON_OFF_COMMAND_ID);
-}
-
-static void zclLevelControlStepCommand(void) {
-  zclSimpleClientCommand( ZCL_LEVEL_CONTROL_CLUSTER_ID,
-                          ZCL_STEP_COMMAND_ID);
-}
-
-static void zclLevelControlStopCommand(void) {
-  zclSimpleClientCommand( ZCL_LEVEL_CONTROL_CLUSTER_ID,
-                          ZCL_STOP_COMMAND_ID);
-}
-
-static void zclOnOffOffCommand(void) {
-  zclSimpleClientCommand( ZCL_ON_OFF_CLUSTER_ID,
-                          ZCL_OFF_COMMAND_ID);
-}
-
-static void zclOnOffOffeffectCommand(void) {
-  zclSimpleClientCommand( ZCL_ON_OFF_CLUSTER_ID,
-                          ZCL_OFF_WITH_EFFECT_COMMAND_ID);
-}
-
-static void zclOnOffOnCommand(void) {
-  zclSimpleClientCommand( ZCL_ON_OFF_CLUSTER_ID,
-                          ZCL_ON_COMMAND_ID);
-}
-
-static void zclOnOffOnrecallCommand(void) {
-  zclSimpleClientCommand( ZCL_ON_OFF_CLUSTER_ID,
-                          ZCL_ON_WITH_RECALL_GLOBAL_SCENE_COMMAND_ID);
-}
-
-static void zclOnOffOntimedoffCommand(void) {
-  zclSimpleClientCommand( ZCL_ON_OFF_CLUSTER_ID,
-                          ZCL_ON_WITH_TIMED_OFF_COMMAND_ID);
-}
-
-static void zclOnOffToggleCommand(void) {
-  zclSimpleClientCommand( ZCL_ON_OFF_CLUSTER_ID,
-                          ZCL_TOGGLE_COMMAND_ID);
-}
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclOnOffOffeffectCommandArguments[] = {
-  "effect id",
-  "effect variant",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclOnOffOntimedoffCommandArguments[] = {
-  "on off control",
-  "on time",
-  "off wait time",
-  NULL
-};
-#endif
-
-static EmberCommandEntry emberCommandTableZclOnOffCommands[] = {
-  emberCommandEntryActionWithDetails("off", zclOnOffOffCommand, "", "Command description for Off", NULL),
-  emberCommandEntryActionWithDetails("offeffect", zclOnOffOffeffectCommand, "uu", "Command description for OffWithEffect", emberCommandTableZclOnOffOffeffectCommandArguments),
-  emberCommandEntryActionWithDetails("on", zclOnOffOnCommand, "", "Command description for On", NULL),
-  emberCommandEntryActionWithDetails("onrecall", zclOnOffOnrecallCommand, "", "Command description for OnWithRecallGlobalScene", NULL),
-  emberCommandEntryActionWithDetails("ontimedoff", zclOnOffOntimedoffCommand, "uvv", "Command description for OnWithTimedOff", emberCommandTableZclOnOffOntimedoffCommandArguments),
-  emberCommandEntryActionWithDetails("toggle", zclOnOffToggleCommand, "", "Command description for Toggle", NULL),
-  emberCommandEntryTerminator()
-};
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclLevelControlMoveCommandArguments[] = {
-  "move mode",
-  "rate",
-  "option mask",
-  "option override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclLevelControlMvToLevelCommandArguments[] = {
-  "level",
-  "transition time",
-  "option mask",
-  "option override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclLevelControlOMoveCommandArguments[] = {
-  "move mode",
-  "rate",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclLevelControlOMvToLevelCommandArguments[] = {
-  "level",
-  "transition time",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclLevelControlOStepCommandArguments[] = {
-  "step mode",
-  "step size",
-  "transition time",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclLevelControlStepCommandArguments[] = {
-  "step mode",
-  "step size",
-  "transition time",
-  "option mask",
-  "option override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclLevelControlStopCommandArguments[] = {
-  "option mask",
-  "option override",
-  NULL
-};
-#endif
-
-static EmberCommandEntry emberCommandTableZclLevelControlCommands[] = {
-  emberCommandEntryActionWithDetails("move", zclLevelControlMoveCommand, "uuuu", "Command description for Move", emberCommandTableZclLevelControlMoveCommandArguments),
-  emberCommandEntryActionWithDetails("mv-to-level", zclLevelControlMvToLevelCommand, "uvuu", "Command description for MoveToLevel", emberCommandTableZclLevelControlMvToLevelCommandArguments),
-  emberCommandEntryActionWithDetails("o-move", zclLevelControlOMoveCommand, "uu", "Command description for MoveWithOnOff", emberCommandTableZclLevelControlOMoveCommandArguments),
-  emberCommandEntryActionWithDetails("o-mv-to-level", zclLevelControlOMvToLevelCommand, "uv", "Command description for MoveToLevelWithOnOff", emberCommandTableZclLevelControlOMvToLevelCommandArguments),
-  emberCommandEntryActionWithDetails("o-step", zclLevelControlOStepCommand, "uuv", "Command description for StepWithOnOff", emberCommandTableZclLevelControlOStepCommandArguments),
-  emberCommandEntryActionWithDetails("o-stop", zclLevelControlOStopCommand, "", "Command description for StopWithOnOff", NULL),
-  emberCommandEntryActionWithDetails("step", zclLevelControlStepCommand, "uuvuu", "Command description for Step", emberCommandTableZclLevelControlStepCommandArguments),
-  emberCommandEntryActionWithDetails("stop", zclLevelControlStopCommand, "uu", "Command description for Stop", emberCommandTableZclLevelControlStopCommandArguments),
-  emberCommandEntryTerminator()
-};
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclIdentifyEzModeCommandArguments[] = {
-  "action",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclIdentifyIdCommandArguments[] = {
-  "identify time",
-  NULL
-};
-#endif
-
 #if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
 static PGM_P PGM emberCommandTableZclIdentifyOffCommandArguments[] = {
   "The endpoint on which to stop identifying",
@@ -386,239 +88,9 @@ static PGM_P PGM emberCommandTableZclIdentifyOnCommandArguments[] = {
 };
 #endif
 
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclIdentifyTriggerCommandArguments[] = {
-  "effect id",
-  "effect variant",
-  NULL
-};
-#endif
-
 static EmberCommandEntry emberCommandTableZclIdentifyCommands[] = {
-  emberCommandEntryActionWithDetails("ez-mode", zclIdentifyEzModeCommand, "u", "Invoke EZMode on an Identify Server", emberCommandTableZclIdentifyEzModeCommandArguments),
-  emberCommandEntryActionWithDetails("id", zclIdentifyIdCommand, "v", "Command description for Identify", emberCommandTableZclIdentifyIdCommandArguments),
   emberCommandEntryActionWithDetails("off", zclIdentifyOnOffCommand, "u", "Writes the IdentifyTime attribute", emberCommandTableZclIdentifyOffCommandArguments),
   emberCommandEntryActionWithDetails("on", zclIdentifyOnOffCommand, "uv", "Writes the IdentifyTime attribute", emberCommandTableZclIdentifyOnCommandArguments),
-  emberCommandEntryActionWithDetails("query", zclIdentifyQueryCommand, "", "Command description for IdentifyQuery", NULL),
-  emberCommandEntryActionWithDetails("trigger", zclIdentifyTriggerCommand, "uu", "Command description for TriggerEffect", emberCommandTableZclIdentifyTriggerCommandArguments),
-  emberCommandEntryTerminator()
-};
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlEmovehueCommandArguments[] = {
-  "move mode",
-  "rate",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlEmovetohueCommandArguments[] = {
-  "enhanced hue",
-  "direction",
-  "transition time",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlEmovetohueandsatCommandArguments[] = {
-  "enhanced hue",
-  "saturation",
-  "transition time",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlEstephueCommandArguments[] = {
-  "step mode",
-  "step size",
-  "transition time",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlLoopCommandArguments[] = {
-  "update flags",
-  "action",
-  "direction",
-  "time",
-  "start hue",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovecolorCommandArguments[] = {
-  "rate x",
-  "rate y",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovecolortempCommandArguments[] = {
-  "move mode",
-  "rate",
-  "color temperature minimum",
-  "color temperature maximum",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovehueCommandArguments[] = {
-  "move mode",
-  "rate",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovesatCommandArguments[] = {
-  "move mode",
-  "rate",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovetocolorCommandArguments[] = {
-  "color x",
-  "color y",
-  "transition time",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovetocolortempCommandArguments[] = {
-  "color temperature",
-  "transition time",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovetohueCommandArguments[] = {
-  "hue",
-  "direction",
-  "transition time",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovetohueandsatCommandArguments[] = {
-  "hue",
-  "saturation",
-  "transition time",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlMovetosatCommandArguments[] = {
-  "saturation",
-  "transition time",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlStepcolorCommandArguments[] = {
-  "step x",
-  "step y",
-  "transition time",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlStepcolortempCommandArguments[] = {
-  "step mode",
-  "step size",
-  "transition time",
-  "color temperature minimum",
-  "color temperature maximum",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlStephueCommandArguments[] = {
-  "step mode",
-  "step size",
-  "transition time",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlStepsatCommandArguments[] = {
-  "step mode",
-  "step size",
-  "transition time",
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-#if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
-static PGM_P PGM emberCommandTableZclColorControlStopmovestepCommandArguments[] = {
-  "options mask",
-  "options override",
-  NULL
-};
-#endif
-
-static EmberCommandEntry emberCommandTableZclColorControlCommands[] = {
-  emberCommandEntryActionWithDetails("emovehue", zclColorControlEmovehueCommand, "uv", "Command description for EnhancedMoveHue", emberCommandTableZclColorControlEmovehueCommandArguments),
-  emberCommandEntryActionWithDetails("emovetohue", zclColorControlEmovetohueCommand, "vuv", "Command description for EnhancedMoveToHue", emberCommandTableZclColorControlEmovetohueCommandArguments),
-  emberCommandEntryActionWithDetails("emovetohueandsat", zclColorControlEmovetohueandsatCommand, "vuv", "Command description for EnhancedMoveToHueAndSaturation", emberCommandTableZclColorControlEmovetohueandsatCommandArguments),
-  emberCommandEntryActionWithDetails("estephue", zclColorControlEstephueCommand, "uvv", "Command description for EnhancedStepHue", emberCommandTableZclColorControlEstephueCommandArguments),
-  emberCommandEntryActionWithDetails("loop", zclColorControlLoopCommand, "uuuvv", "Command description for ColorLoopSet", emberCommandTableZclColorControlLoopCommandArguments),
-  emberCommandEntryActionWithDetails("movecolor", zclColorControlMovecolorCommand, "rruu", "Moves the color.", emberCommandTableZclColorControlMovecolorCommandArguments),
-  emberCommandEntryActionWithDetails("movecolortemp", zclColorControlMovecolortempCommand, "uvvvuu", "Command description for MoveColorTemperature", emberCommandTableZclColorControlMovecolortempCommandArguments),
-  emberCommandEntryActionWithDetails("movehue", zclColorControlMovehueCommand, "uuuu", "Move hue up or down at specified rate.", emberCommandTableZclColorControlMovehueCommandArguments),
-  emberCommandEntryActionWithDetails("movesat", zclColorControlMovesatCommand, "uuuu", "Move saturation up or down at specified rate.", emberCommandTableZclColorControlMovesatCommandArguments),
-  emberCommandEntryActionWithDetails("movetocolor", zclColorControlMovetocolorCommand, "vvvuu", "Move to specified color.", emberCommandTableZclColorControlMovetocolorCommandArguments),
-  emberCommandEntryActionWithDetails("movetocolortemp", zclColorControlMovetocolortempCommand, "vvuu", "Move to a specific color temperature.", emberCommandTableZclColorControlMovetocolortempCommandArguments),
-  emberCommandEntryActionWithDetails("movetohue", zclColorControlMovetohueCommand, "uuvuu", "Move to specified hue.", emberCommandTableZclColorControlMovetohueCommandArguments),
-  emberCommandEntryActionWithDetails("movetohueandsat", zclColorControlMovetohueandsatCommand, "uuvuu", "Move to hue and saturation.", emberCommandTableZclColorControlMovetohueandsatCommandArguments),
-  emberCommandEntryActionWithDetails("movetosat", zclColorControlMovetosatCommand, "uvuu", "Move to specified saturation.", emberCommandTableZclColorControlMovetosatCommandArguments),
-  emberCommandEntryActionWithDetails("stepcolor", zclColorControlStepcolorCommand, "rrvuu", "Steps the lighting to a specific color.", emberCommandTableZclColorControlStepcolorCommandArguments),
-  emberCommandEntryActionWithDetails("stepcolortemp", zclColorControlStepcolortempCommand, "uvvvvuu", "Command description for StepColorTemperature", emberCommandTableZclColorControlStepcolortempCommandArguments),
-  emberCommandEntryActionWithDetails("stephue", zclColorControlStephueCommand, "uuuuu", "Step hue up or down by specified size at specified rate.", emberCommandTableZclColorControlStephueCommandArguments),
-  emberCommandEntryActionWithDetails("stepsat", zclColorControlStepsatCommand, "uuuuu", "Step saturation up or down by specified size at specified rate.", emberCommandTableZclColorControlStepsatCommandArguments),
-  emberCommandEntryActionWithDetails("stopmovestep", zclColorControlStopmovestepCommand, "uu", "Command description for StopMoveStep", emberCommandTableZclColorControlStopmovestepCommandArguments),
   emberCommandEntryTerminator()
 };
 
@@ -638,10 +110,13 @@ static EmberCommandEntry emberCommandTableZclBasicCommands[] = {
 
 static EmberCommandEntry emberCommandTableZclCommands[] = {
   emberCommandEntrySubMenu("basic", emberCommandTableZclBasicCommands, ""),
-  emberCommandEntrySubMenu("color-control", emberCommandTableZclColorControlCommands, ""),
   emberCommandEntrySubMenu("identify", emberCommandTableZclIdentifyCommands, ""),
-  emberCommandEntrySubMenu("level-control", emberCommandTableZclLevelControlCommands, ""),
-  emberCommandEntrySubMenu("on-off", emberCommandTableZclOnOffCommands, ""),
+  emberCommandEntryTerminator()
+};
+
+static EmberCommandEntry emberCommandTablePluginScenesCommands[] = {
+  emberCommandEntryActionWithDetails("clear", emAfPluginScenesServerClear, "", "Clear the scenes table on every endpoint.", NULL),
+  emberCommandEntryActionWithDetails("print", emAfPluginScenesServerPrintInfo, "", "Print information about the contents of the scenes table.", NULL),
   emberCommandEntryTerminator()
 };
 
@@ -912,6 +387,12 @@ static EmberCommandEntry emberCommandTablePluginIdentifyCommands[] = {
   emberCommandEntryTerminator()
 };
 
+static EmberCommandEntry emberCommandTablePluginGroupsServerCommands[] = {
+  emberCommandEntryActionWithDetails("clear", emAfGroupsServerCliClear, "", "Clear the groups table on every endpoint.", NULL),
+  emberCommandEntryActionWithDetails("print", emAfGroupsServerCliPrint, "", "Print information about the contents of the groups table.", NULL),
+  emberCommandEntryTerminator()
+};
+
 #if defined(EMBER_COMMAND_INTEPRETER_HAS_DESCRIPTION_FIELD)
 static PGM_P PGM emberCommandTablePluginGreenPowerClientAddGroupSinkCommandArguments[] = {
   "GPD Source ID",
@@ -998,6 +479,7 @@ static EmberCommandEntry emberCommandTablePluginConnectionManagerCommands[] = {
 static EmberCommandEntry emberCommandTablePluginCommands[] = {
   emberCommandEntrySubMenu("connection-manager", emberCommandTablePluginConnectionManagerCommands, ""),
   emberCommandEntrySubMenu("green-power-client", emberCommandTablePluginGreenPowerClientCommands, ""),
+  emberCommandEntrySubMenu("groups-server", emberCommandTablePluginGroupsServerCommands, ""),
   emberCommandEntrySubMenu("identify", emberCommandTablePluginIdentifyCommands, ""),
   emberCommandEntrySubMenu("mfglib", emberCommandTablePluginMfglibCommands, ""),
   emberCommandEntrySubMenu("network-steering", emberCommandTablePluginNetworkSteeringCommands, ""),
@@ -1006,6 +488,7 @@ static EmberCommandEntry emberCommandTablePluginCommands[] = {
   emberCommandEntrySubMenu("ota-storage-common", emberCommandTablePluginOtaStorageCommonCommands, ""),
   emberCommandEntrySubMenu("ota-storage-eeprom", emberCommandTablePluginOtaStorageEepromCommands, ""),
   emberCommandEntrySubMenu("reporting", emberCommandTablePluginReportingCommands, ""),
+  emberCommandEntrySubMenu("scenes", emberCommandTablePluginScenesCommands, ""),
   emberCommandEntryTerminator()
 };
 

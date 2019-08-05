@@ -4,7 +4,7 @@
     <file name="system_efr32mg13p.c" uri="studio:/sdk/platform/Device/SiliconLabs/EFR32MG13P/Source/system_efr32mg13p.c"/>
   </folder>
   <folder name="hal-config">
-    <file name="hal-config.h" uri="studio:/sdk/app/builder/Test/hal-config/hal-config.h"/>
+    <file name="hal-config.h" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/hal-config/hal-config.h"/>
   </folder>
   <folder name="external-generated-files">
     <file name="bootloader-interface.c" uri="studio:/sdk/platform/base/hal/micro/cortexm3/efm32/bootloader-interface.c"/>
@@ -46,21 +46,21 @@
   <file name="zdo-cli.c" uri="studio:/sdk/protocol/zigbee/app/framework/cli/zdo-cli.c"/>
   <file name="zigbee-device-common.c" uri="studio:/sdk/protocol/zigbee/app/util/zigbee-framework/zigbee-device-common.c"/>
   <file name="zigbee-device-library.c" uri="studio:/sdk/protocol/zigbee/app/util/zigbee-framework/zigbee-device-library.c"/>
-  <file name="afv2-bookkeeping.h" uri="studio:/sdk/app/builder/Test/afv2-bookkeeping.h"/>
-  <file name="afv2-bookkeeping.c" uri="studio:/sdk/app/builder/Test/afv2-bookkeeping.c"/>
-  <file name="custom_efr32mg13p732f512gm48.hwconf" uri="studio:/sdk/app/builder/Test/custom_efr32mg13p732f512gm48.hwconf"/>
-  <file name="afv2-token.h" uri="studio:/sdk/app/builder/Test/afv2-token.h"/>
-  <file name="afv2-mfg-token.h" uri="studio:/sdk/app/builder/Test/afv2-mfg-token.h"/>
-  <file name="Test_endpoint_config.h" uri="studio:/sdk/app/builder/Test/Test_endpoint_config.h"/>
-  <file name="Test_callbacks.c" uri="studio:/sdk/app/builder/Test/Test_callbacks.c"/>
-  <file name="Test.h" uri="studio:/sdk/app/builder/Test/Test.h"/>
-  <file name="Test_tokens.h" uri="studio:/sdk/app/builder/Test/Test_tokens.h"/>
-  <file name="Test-prebuild.py" uri="studio:/sdk/app/builder/Test/Test-prebuild.py"/>
-  <file name="Test.mak" uri="studio:/sdk/app/builder/Test/Test.mak"/>
-  <file name="Test-postbuild.py" uri="studio:/sdk/app/builder/Test/Test-postbuild.py"/>
-  <includePath uri="studio:/sdk/app/builder/Test"/>
+  <file name="afv2-bookkeeping.h" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/afv2-bookkeeping.h"/>
+  <file name="afv2-bookkeeping.c" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/afv2-bookkeeping.c"/>
+  <file name="custom_efr32mg13p732f512gm48.hwconf" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/custom_efr32mg13p732f512gm48.hwconf"/>
+  <file name="afv2-token.h" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/afv2-token.h"/>
+  <file name="afv2-mfg-token.h" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/afv2-mfg-token.h"/>
+  <file name="ZigBeeAdapterModule_endpoint_config.h" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule_endpoint_config.h"/>
+  <file name="ZigBeeAdapterModule_callbacks.c" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule_callbacks.c"/>
+  <file name="ZigBeeAdapterModule.h" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule.h"/>
+  <file name="ZigBeeAdapterModule_tokens.h" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule_tokens.h"/>
+  <file name="ZigBeeAdapterModule-prebuild.py" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule-prebuild.py"/>
+  <file name="ZigBeeAdapterModule.mak" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule.mak"/>
+  <file name="ZigBeeAdapterModule-postbuild.py" uri="studio:/sdk/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule-postbuild.py"/>
+  <includePath uri="studio:/sdk/app/builder/ZigBeeAdapterModule"/>
   <includePath uri="studio:/project/hal-config"/>
-  <includePath uri="studio:/sdk/app/builder/Test/hal-config"/>
+  <includePath uri="studio:/sdk/app/builder/ZigBeeAdapterModule/hal-config"/>
   <includePath uri="studio:/project/external-generated-files"/>
   <includePath uri="studio:/sdk/platform/base/hal/micro/cortexm3/efm32"/>
   <includePath uri="studio:/sdk/platform/bootloader/api"/>
@@ -78,11 +78,11 @@
   <includePath uri="studio:/sdk/platform/radio/rail_lib/chip/efr32/rf/common/cortex"/>
   <includePath uri="studio:/sdk/platform/radio/rail_lib/chip/efr32"/>
   <macroDefinition languageCompatibility="c asm" name="LOCAL_STORAGE_GECKO_INFO_PAGE_BTL" value="1"/>
-  <macroDefinition languageCompatibility="c asm" name="ATTRIBUTE_STORAGE_CONFIGURATION" value="&quot;app/builder/Test/Test_endpoint_config.h&quot;"/>
+  <macroDefinition languageCompatibility="c asm" name="ATTRIBUTE_STORAGE_CONFIGURATION" value="&quot;app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule_endpoint_config.h&quot;"/>
   <macroDefinition languageCompatibility="c asm" name="CORTEXM3_EFR32MG13P732F512GM48" value="1"/>
   <macroDefinition languageCompatibility="c asm" name="CORTEXM3_EFR32MG13P732F512GM48_MICRO" value="1"/>
-  <macroDefinition languageCompatibility="c asm" name="GENERATED_TOKEN_HEADER" value="&quot;app/builder/Test/Test_tokens.h&quot;"/>
-  <macroDefinition languageCompatibility="c asm" name="ZA_GENERATED_HEADER" value="&quot;app/builder/Test/Test.h&quot;"/>
+  <macroDefinition languageCompatibility="c asm" name="GENERATED_TOKEN_HEADER" value="&quot;app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule_tokens.h&quot;"/>
+  <macroDefinition languageCompatibility="c asm" name="ZA_GENERATED_HEADER" value="&quot;app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule.h&quot;"/>
   <macroDefinition languageCompatibility="c asm" name="PLATFORM_HEADER" value="&quot;platform/base/hal/micro/cortexm3/compiler/gcc.h&quot;"/>
   <macroDefinition partCompatibility=".*efr32.*" languageCompatibility="c asm" name="EFR32MG13P" value="1"/>
   <macroDefinition partCompatibility=".*efr32.*" languageCompatibility="c asm" name="EFR32MG13P732F512GM48" value="1"/>
@@ -97,8 +97,8 @@
   <macroDefinition name="EMBER_PARAMETERIZED_BROADCAST_TABLE" value=""/>
   <macroDefinition name="EMLIB_USER_CONFIG" value=""/>
   <macroDefinition name="PHY_RAIL" value=""/>
-  <macroDefinition name="APPLICATION_TOKEN_HEADER" value="&quot;app/builder/Test/afv2-token.h&quot;"/>
-  <macroDefinition name="APPLICATION_MFG_TOKEN_HEADER" value="&quot;app/builder/Test/afv2-mfg-token.h&quot;"/>
+  <macroDefinition name="APPLICATION_TOKEN_HEADER" value="&quot;app/builder/ZigBeeAdapterModule/afv2-token.h&quot;"/>
+  <macroDefinition name="APPLICATION_MFG_TOKEN_HEADER" value="&quot;app/builder/ZigBeeAdapterModule/afv2-mfg-token.h&quot;"/>
   <toolOption toolId="iar.arm.toolchain.linker.v5.4.0" optionId="iar.arm.toolchain.linker.option.configSymbolDefs.v6.2.0" value="LOCAL_STORAGE_GECKO_INFO_PAGE_BTL=1  FLASH_SIZE=524288 RAM_SIZE=65536 SIMEEPROM_SIZE=8192 EMBER_MALLOC_HEAP_SIZE=0"/>
   <toolOption partCompatibility=".*efr32.*" toolId="iar.arm.toolchain.linker.v5.4.0" optionId="iar.arm.toolchain.linker.option.icfFile.v5.4.0" value="${StudioSdkPath}/platform/base/hal/micro/cortexm3/efm32/iar-cfg.icf"/>
   <toolOption partCompatibility=".*ember.*" toolId="iar.arm.toolchain.linker.v5.4.0" optionId="iar.arm.toolchain.linker.option.icfFile.v5.4.0" value="C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/gecko_sdk_suite/v2.2/platform/base/hal/micro/cortexm3/em35x/efr32mg13p732f512gm48/iar-cfg.icf"/>
@@ -162,6 +162,6 @@
     <toolListOption toolchainCompatibility="com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:4.9.3.20150529 " value="${StudioSdkPath}/protocol/zigbee/build/debug-basic-library-cortexm3-gcc-efr32mg13p-rail/debug-basic-library.a"/>
   </toolOption>
   <module builtin="true" id="SDK.HAL.SERIAL.BASE"/>
-  <prebuildStep> cmd //c 'C:\SILICO~1\SIMPLI~1\v4\DEVELO~1\sdks\GECKO_~1\v2.2/app/builder/Test/Test-prebuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</prebuildStep>
-  <postbuildStep> cmd //c 'C:\SILICO~1\SIMPLI~1\v4\DEVELO~1\sdks\GECKO_~1\v2.2/app/builder/Test/Test-postbuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</postbuildStep>
+  <prebuildStep> cmd //c 'C:\SILICO~1\SIMPLI~1\v4\DEVELO~1\sdks\GECKO_~1\v2.2/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule-prebuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</prebuildStep>
+  <postbuildStep> cmd //c 'C:\SILICO~1\SIMPLI~1\v4\DEVELO~1\sdks\GECKO_~1\v2.2/app/builder/ZigBeeAdapterModule/ZigBeeAdapterModule-postbuild.bat' '${BuildArtifactFileBaseName}' '${ProjDirPath}' '${TOOLKIT_DIR}' 'C:\SiliconLabs\SimplicityStudio\v4'</postbuildStep>
 </project>

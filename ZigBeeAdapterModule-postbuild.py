@@ -90,14 +90,14 @@ def GBL():
 
 
 def OTA():
-    if not '"%PROJECT_DIR%\..\\..\\..\\protocol\\zigbee\\tool\\image-builder\\image-builder-windows.exe" --create "%TARGET_BPATH%.ota" --version 1 --manuf-id 0x121c --image-type 5139 --tag-id 0x0000 --tag-file "%TARGET_BPATH%.gbl" --string "EBL Test"':
+    if not '"%PROJECT_DIR%\..\\..\\..\\protocol\\zigbee\\tool\\image-builder\\image-builder-windows.exe" --create "%TARGET_BPATH%.ota" --version 1 --manuf-id 0x121c --image-type 5138 --tag-id 0x0000 --tag-file "%TARGET_BPATH%.gbl" --string "EBL ZigBeeAdapterModule"':
         sys.exit(0)
     print " "
     print "This creates a ZigBee OTA file if the OTA Client Policy Plugin has been enabled."
     print "It uses the parameters defined there.  "
     print " "
     # wine needed by postbuild script under studio for mac/linux
-    IMAGE_BUILDER = '"%PROJECT_DIR%\..\\..\\..\\protocol\\zigbee\\tool\\image-builder\\image-builder-windows.exe" --create "%TARGET_BPATH%.ota" --version 1 --manuf-id 0x121c --image-type 5139 --tag-id 0x0000 --tag-file "%TARGET_BPATH%.gbl" --string "EBL Test"'.replace("\t", "\\t")
+    IMAGE_BUILDER = '"%PROJECT_DIR%\..\\..\\..\\protocol\\zigbee\\tool\\image-builder\\image-builder-windows.exe" --create "%TARGET_BPATH%.ota" --version 1 --manuf-id 0x121c --image-type 5138 --tag-id 0x0000 --tag-file "%TARGET_BPATH%.gbl" --string "EBL ZigBeeAdapterModule"'.replace("\t", "\\t")
     WINE_CMD = WINE.replace("cmd /C ","") if not "echo" in IMAGE_BUILDER else WINE
     OTA_COMMAND = WINE_CMD + IMAGE_BUILDER
     OTA_COMMAND = OTA_COMMAND.replace("%PROJECT_DIR%", PROJECT_DIR)

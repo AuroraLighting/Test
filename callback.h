@@ -25586,6 +25586,116 @@ void emberAfPluginOtaStorageSimpleEepromEraseCompleteCallback(bool success);
 /** @} END OTA Simple Storage EEPROM Driver Plugin Callbacks */
 
 
+/** @name Button Interface Plugin Callbacks */
+// @{
+
+/** @brief Button0 Pressed Short
+ *
+ * This function returns the number of times a button was short pressed.
+ *
+ * @param timePressedMs Time (in ms) button 0 was pressed  Ver.: always
+ */
+void emberAfPluginButtonInterfaceButton0PressedShortCallback(uint16_t timePressedMs);
+/** @brief Button1 Pressed Short
+ *
+ * This function returns the number of times a button was short pressed.
+ *
+ * @param timePressedMs Time (in ms) button 1 was pressed  Ver.: always
+ */
+void emberAfPluginButtonInterfaceButton1PressedShortCallback(uint16_t timePressedMs);
+/** @brief Button0 Pressed Long
+ *
+ * This function returns the number of times a button was short pressed.
+ *
+ * @param timePressedMs Amount of time button 0 was pressed.  Ver.: always
+ * @param pressedAtReset Was the button pressed at startup.  Ver.: always
+ */
+void emberAfPluginButtonInterfaceButton0PressedLongCallback(uint16_t timePressedMs,
+                                                            bool pressedAtReset);
+/** @brief Button1 Pressed Long
+ *
+ * This function returns the number of times a button was short pressed.
+ *
+ * @param timePressedMs Amount of time button 1 was pressed.  Ver.: always
+ * @param pressedAtReset Was the button pressed at startup.  Ver.: always
+ */
+void emberAfPluginButtonInterfaceButton1PressedLongCallback(uint16_t timePressedMs,
+                                                            bool pressedAtReset);
+/** @brief Button0 Pressing
+ *
+ * This function is periodically called when button 0 is being pressed.
+ *
+ */
+void emberAfPluginButtonInterfaceButton0PressingCallback(void);
+/** @brief Button1 Pressing
+ *
+ * This function is periodically called when button 1 is being pressed.
+ *
+ */
+void emberAfPluginButtonInterfaceButton1PressingCallback(void);
+/** @brief Button0 Low
+ *
+ * This function is called when the GPIO tied to button zero goes low
+ *
+ */
+void emberAfPluginButtonInterfaceButton0LowCallback(void);
+/** @brief Button0 High
+ *
+ * This function is called when the GPIO tied to button zero goes high
+ *
+ */
+void emberAfPluginButtonInterfaceButton0HighCallback(void);
+/** @brief Button1 Low
+ *
+ * This function is called when the GPIO tied to button one goes low
+ *
+ */
+void emberAfPluginButtonInterfaceButton1LowCallback(void);
+/** @brief Button1 High
+ *
+ * This function is called when the GPIO tied to button one goes high
+ *
+ */
+void emberAfPluginButtonInterfaceButton1HighCallback(void);
+/** @} END Button Interface Plugin Callbacks */
+
+
+/** @name Groups Server Cluster Plugin Callbacks */
+// @{
+
+/** @brief Get Group Name
+ *
+ * This function returns the name of a group with the provided group ID, should
+ * it exist.
+ *
+ * @param endpoint Endpoint Ver.: always
+ * @param groupId Group ID Ver.: always
+ * @param groupName Group Name Ver.: always
+ */
+void emberAfPluginGroupsServerGetGroupNameCallback(uint8_t endpoint,
+                                                   uint16_t groupId,
+                                                   uint8_t *groupName);
+/** @brief Set Group Name
+ *
+ * This function sets the name of a group with the provided group ID.
+ *
+ * @param endpoint Endpoint Ver.: always
+ * @param groupId Group ID Ver.: always
+ * @param groupName Group Name Ver.: always
+ */
+void emberAfPluginGroupsServerSetGroupNameCallback(uint8_t endpoint,
+                                                   uint16_t groupId,
+                                                   uint8_t *groupName);
+/** @brief Group Names Supported
+ *
+ * This function returns whether or not group names are supported.
+ *
+ * @param endpoint Endpoint Ver.: always
+ */
+bool emberAfPluginGroupsServerGroupNamesSupportedCallback(uint8_t endpoint);
+/** @} END Groups Server Cluster Plugin Callbacks */
+
+
 /** @name Reporting Plugin Callbacks */
 // @{
 
@@ -25670,6 +25780,20 @@ void emberAfPluginLevelControlClusterServerPostInitCallback(uint8_t endpoint);
  */
 void emberAfPluginLevelControlCoupledColorTempChangeCallback(uint8_t endpoint);
 /** @} END Level Control Server Cluster Plugin Callbacks */
+
+
+/** @name On/Off Server Cluster Plugin Callbacks */
+// @{
+
+/** @brief On/off Cluster Server Post Init
+ *
+ * Following resolution of the On/Off state at startup for this endpoint, perform any
+ * additional initialization needed; e.g., synchronize hardware state.
+ *
+ * @param endpoint Endpoint that is being initialized  Ver.: always
+ */
+void emberAfPluginOnOffClusterServerPostInitCallback(uint8_t endpoint);
+/** @} END On/Off Server Cluster Plugin Callbacks */
 
 
 /** @name Update TC Link Key Plugin Callbacks */
@@ -25817,36 +25941,6 @@ void emberAfPluginConnectionManagerLeaveNetworkCallback(void);
  */
 void emberAfPluginCountersRolloverCallback(EmberCounterType type);
 /** @} END Counters Plugin Callbacks */
-
-
-/** @name Battery Monitor Plugin Callbacks */
-// @{
-
-/** @brief Data Ready
- *
- * This function is called whenever the battery monitor has generated a new
- * valid battery level
- *
- * @param batteryVoltageMilliV The battery voltage, in milli Volts  Ver.: always
- */
-void emberAfPluginBatteryMonitorDataReadyCallback(uint16_t batteryVoltageMilliV);
-/** @} END Battery Monitor Plugin Callbacks */
-
-
-/** @name Color Control Cluster (deprecated) Plugin Callbacks */
-// @{
-
-/** @brief Is Color Supported
- *
- * This function will be called to determine whether a color is supported by a
- * device. The color will be specified by hue and saturation.
- *
- * @param hue   Ver.: always
- * @param saturation   Ver.: always
- */
-bool emberAfPluginColorControlIsColorSupportedCallback(uint8_t hue,
-                                                       uint8_t saturation);
-/** @} END Color Control Cluster (deprecated) Plugin Callbacks */
 
 
 /** @name Basic Server Cluster Plugin Callbacks */

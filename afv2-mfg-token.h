@@ -8,6 +8,8 @@
 
 // Token header for the token.properties.
 
+// Token header for the Scenes Server Cluster plugin.
+
 // Token header for the Manufacturing Library CLI plugin.
 
 // Token header for the Reporting plugin.
